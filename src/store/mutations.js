@@ -4,6 +4,9 @@ export default {
       state.gl_picks.splice(idx, 1, unit);
     }
   },
+  SET_PICKS: (state, picks) => {
+    state.gl_picks = picks;
+  },
   SET_BAN: (state, unit_banned) => {
     state.gl_bans = unit_banned;
   },

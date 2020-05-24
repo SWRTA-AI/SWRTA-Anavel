@@ -5,6 +5,10 @@ export default {
   unpickUnit: ({ commit }, idx) => {
     commit('SET_PICK', { unit: null, idx });
   },
+  resetPicks: ({ commit }) => {
+    let newArray = new Array(10).fill(null);
+    commit('SET_PICKS', newArray);
+  },
   setBannedUnits: ({ commit }, units) => {
     commit('SET_BAN', units);
   },

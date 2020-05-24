@@ -1,15 +1,14 @@
 <template>
   <div class="unitBoxContainer">
     <b-container>
-      <b-row>Unit Box</b-row>
-      <b-row
-        ><b-form-input
+      <b-row>
+        <b-form-input
           v-model="searchQuery"
-          placeholder="Search"
+          placeholder="Type to search"
           class="unitBoxSearchBar"
           @keyup="updateUnitBox"
-        ></b-form-input
-      ></b-row>
+        ></b-form-input>
+      </b-row>
       <b-row v-for="(row, i) of unitMatrix" :key="i">
         <b-col v-for="(unit, j) of row" :key="j" class="px-0">
           <UnitPickTile :unit="unit" />

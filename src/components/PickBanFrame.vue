@@ -1,8 +1,13 @@
 <template>
   <b-container class="pickBanContainer offset-1">
     <b-row>
-      <b-col class="title col text-center mb-3">
+      <b-col class="title col-10 offset-1 text-center mb-3">
         Pick - Bans
+      </b-col>
+      <b-col class="col-1 my-2">
+        <b-button variant="outline-danger" @click="resetPicks">
+          <span>reset</span>
+        </b-button>
       </b-col>
     </b-row>
     <b-row>
@@ -29,13 +34,16 @@
 
 <script>
 import UnitPickCard from '@/components/UnitPickCard.vue';
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 export default {
   components: {
     UnitPickCard,
   },
   computed: {
     ...mapState(['FIRST_PICK_IDX', 'SECOND_PICK_IDX']),
+  },
+  methods: {
+    ...mapActions(['resetPicks']),
   },
 };
 </script>
