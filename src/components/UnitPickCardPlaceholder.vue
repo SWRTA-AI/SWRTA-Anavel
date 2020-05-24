@@ -2,8 +2,8 @@
   <b-container class="unitPickCardPlaceholderContainer">
     <b-row>
       <b-col
-        class="col-4 px-0 py-0"
-        :class="[imagePosition == 'left' ? '' : 'order-1']"
+        class="col-3 px-0 py-0"
+        :class="[layoutType == 1 ? 'order-1' : '']"
       >
         <b-img
           :src="IMAGE_URL_PREFIX + PLACEHOLDER_IMG"
@@ -11,8 +11,11 @@
           class="mb-3"
         />
       </b-col>
-      <b-col class="text-area col-8">
-        Pick a unit
+      <b-col
+        class="text-area col-9"
+        :class="[layoutType == 1 ? 'text-right' : 'text-left']"
+      >
+        Pick an unit
       </b-col>
     </b-row>
   </b-container>
@@ -23,6 +26,7 @@ import { mapState, mapActions } from 'vuex';
 export default {
   props: {
     pickIndex: Number,
+    layoutType: Number,
   },
   data() {
     return {
@@ -30,12 +34,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(['IMAGE_URL_PREFIX', 'FIRST_PICK_IDX', 'gl_picks']),
-    imagePosition() {
-      return this.FIRST_PICK_IDX.includes(this.pickIndex)
-        ? 'right'
-        : 'left';
-    },
+    ...mapState(['IMAGE_URL_PREFIX']),
   },
 };
 </script>
@@ -43,6 +42,7 @@ export default {
 <style scoped>
 img {
   opacity: 0.2;
+  border-radius: 10px;
 }
 .text-area {
   align-self: center;
