@@ -11,12 +11,18 @@
           <UnitBox />
         </b-col>
         <b-col class="col-3 offset-1 mt-5">
-          <UnitPickCard :index="0" />
-          <UnitPickCard :index="3" />
+          <UnitPickCard
+            v-for="i of FIRST_PICK_IDX"
+            :key="i"
+            :pickIndex="i"
+          />
         </b-col>
         <b-col class="col-3 offset-1 mt-5">
-          <UnitPickCard :index="1" />
-          <UnitPickCard :index="2" />
+          <UnitPickCard
+            v-for="i of SECOND_PICK_IDX"
+            :key="i"
+            :pickIndex="i"
+          />
         </b-col>
       </b-row>
     </b-container>
@@ -39,7 +45,7 @@ export default {
   },
   computed: {
     ...mapGetters(['getPicks']),
-    ...mapState(['BESTIARY']),
+    ...mapState(['BESTIARY', 'FIRST_PICK_IDX', 'SECOND_PICK_IDX']),
 
     showPickNames() {
       return this.getPicks.map(x => (x == null ? x : x.name));

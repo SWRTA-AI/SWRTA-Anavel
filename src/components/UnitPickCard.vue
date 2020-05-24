@@ -6,20 +6,31 @@
         :class="[imagePosition == 'left' ? '' : 'order-1']"
       >
         <b-img
-          v-if="unit != null"
+          v-if="unit != null && !unit.isPlaceholder"
           :src="IMAGE_URL_PREFIX + unit.image_filename"
           :alt="unit.name"
           class="unitPickTile mb-2"
           @click="unpickSelf"
         />
+
+        <b-img
+          v-if="unit.isPlaceholder"
+          :src="IMAGE_URL_PREFIX + placeholder.image_filename"
+          alt="placeholder"
+          class="placeholder mb-2"
+        />
       </b-col>
+
       <b-col class="col-8">
-        <div v-if="detailedInfo != null" :hidden="unit.isPlaceholder">
-          {{ detailedInfo.name }}
-          ({{ detailedInfo.element }})
-          <br />
-          {{ unit.name }}
-          ({{ unit.element }})
+        <div :hidden="unit.isPlaceholder">
+          <div v-if="unit != null">
+            {{ unit.name }}
+            ({{ unit.element }})
+          </div>
+          <div v-if="detailedInfo != null">
+            {{ detailedInfo.name }}
+            ({{ detailedInfo.element }})
+          </div>
         </div>
       </b-col>
     </b-row>
@@ -35,7 +46,7 @@ export default {
     UnitPickTile,
   },
   props: {
-    index: Number,
+    pickIndex: Number,
   },
   data() {
     return {
@@ -45,20 +56,23 @@ export default {
         element: 'Fire',
         isPlaceholder: true,
       },
-      unitId: null,
       detailedInfo: null,
     };
   },
   computed: {
     ...mapState(['IMAGE_URL_PREFIX', 'FIRST_PICK_IDX', 'gl_picks']),
     unit() {
-      let pickedUnit = this.gl_picks[this.index];
-      this.unitId = pickedUnit ? pickedUnit.com2us_id : null;
+      let pickedUnit = this.gl_picks[this.pickIndex];
       return pickedUnit ? pickedUnit : this.placeholder;
+    },
+    unitDetailInfoUrl() {
+      return this.unit.pk
+        ? `https://swarfarm.com/api/bestiary/${this.unit.pk}?format=json`
+        : null;
     },
 
     imagePosition() {
-      return this.FIRST_PICK_IDX.includes(this.index)
+      return this.FIRST_PICK_IDX.includes(this.pickIndex)
         ? 'right'
         : 'left';
     },
@@ -66,28 +80,23 @@ export default {
   methods: {
     ...mapActions(['unpickUnit']),
     unpickSelf() {
-      this.unpickUnit(this.index);
+      this.unpickUnit(this.pickIndex);
       this.detailedInfo = null;
     },
     fetchUnitDetailInfo() {
-      if (this.unit.isPlaceholder) {
-        return;
+      if (this.unitDetailInfoUrl) {
+        fetch(this.unitDetailInfoUrl, {
+          method: 'GET',
+        })
+          .then(response => response.json())
+          .then(data => (this.detailedInfo = data));
       }
-
-      fetch(this.unit.url, {
-        method: 'GET',
-      })
-        .then(response => response.json())
-        .then(data => (this.detailedInfo = data));
     },
   },
   watch: {
-    unitId() {
+    unitDetailInfoUrl() {
       this.fetchUnitDetailInfo();
     },
-  },
-  updated() {
-    // this.fetchUnitDetailInfo();
   },
 };
 </script>
@@ -98,5 +107,8 @@ export default {
 }
 .card-body {
   padding: 5px 0px;
+}
+.placeholder {
+  opacity: 0.2;
 }
 </style>
