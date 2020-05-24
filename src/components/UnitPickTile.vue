@@ -1,15 +1,12 @@
 <template>
   <div class="UnitPickTileContainer">
     <div :class="isSelected ? 'selected' : 'not-selected'">
-      <b-card
-        :img-src="IMAGE_URL_PREFIX + unit.image_filename"
-        :img-alt="unit.name"
-        :img-title="unit.name"
-        img-end
+      <b-img
+        :src="IMAGE_URL_PREFIX + unit.image_filename"
+        :alt="unit.name"
         class="unitPickTile mb-2"
         @click="toggleIsSelected()"
-      >
-      </b-card>
+      />
     </div>
   </div>
 </template>

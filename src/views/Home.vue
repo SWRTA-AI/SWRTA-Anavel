@@ -2,25 +2,27 @@
   <div class="home">
     <div>
       <b-card-text>
-        {{ getPicks }}
+        {{ showPickNames }}
       </b-card-text>
     </div>
-    <UnitPickTile
-      v-for="unit of randomUnits"
-      :key="unit.com2us_id"
-      :unit="unit"
-    />
+    <b-container fluid>
+      <b-col class="col-3">
+        <UnitBox :units="randomUnits" />
+      </b-col>
+      <b-col class="col-9"> </b-col>
+    </b-container>
+    <b-container> </b-container>
   </div>
 </template>
 
 <script>
-import UnitPickTile from '@/components/UnitPickTile.vue';
+import UnitBox from '@/components/UnitBox.vue';
 import { mapState, mapGetters } from 'vuex';
 
 export default {
   name: 'Home',
   components: {
-    UnitPickTile,
+    UnitBox,
   },
   methods: {},
   computed: {
@@ -28,11 +30,14 @@ export default {
     ...mapState(['BESTIARY']),
     randomUnits() {
       let units = [];
-      for (let i = 0; i < 15; i++) {
+      for (let i = 0; i < 25; i++) {
         let idx = Math.floor(Math.random() * this.BESTIARY.length);
         units.push(this.BESTIARY[idx]);
       }
       return units;
+    },
+    showPickNames() {
+      return this.getPicks.map(x => (x == null ? x : x.name));
     },
   },
 };
