@@ -1,38 +1,34 @@
 <template>
   <div class="unitPickCardContainer">
-    <b-row>
+    <b-row v-if="unit">
       <b-col
         class="col-4 px-0 py-0"
         :class="[imagePosition == 'left' ? '' : 'order-1']"
       >
         <b-img
-          v-if="unit != null && !unit.isPlaceholder"
           :src="IMAGE_URL_PREFIX + unit.image_filename"
           :alt="unit.name"
-          class="unitPickTile mb-2"
+          class="unitPickTile mb-3"
           @click="unpickSelf"
         />
-
-        <b-img
-          v-if="unit.isPlaceholder"
-          :src="IMAGE_URL_PREFIX + placeholder.image_filename"
-          alt="placeholder"
-          class="placeholder mb-2"
-        />
       </b-col>
-
       <b-col class="col-8">
         <div :hidden="unit.isPlaceholder">
-          <div v-if="unit != null">
+          <div v-if="unit">
             {{ unit.name }}
             ({{ unit.element }})
           </div>
-          <div v-if="detailedInfo != null">
+          <div v-if="detailedInfo">
             {{ detailedInfo.name }}
             ({{ detailedInfo.element }})
           </div>
         </div>
       </b-col>
+    </b-row>
+
+    <!-- Placeholder -->
+    <b-row v-if="unit == null">
+      <Placeholder :pickIndex="pickIndex" />
     </b-row>
   </div>
 </template>
@@ -40,33 +36,32 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 import UnitPickTile from '@/components/UnitPickTile.vue';
+import Placeholder from '@/components/UnitPickCardPlaceholder.vue';
 
 export default {
   components: {
     UnitPickTile,
+    Placeholder,
   },
   props: {
     pickIndex: Number,
   },
   data() {
     return {
-      placeholder: {
-        name: 'Slime',
-        image_filename: 'unit_icon_0010_1_0.png',
-        element: 'Fire',
-        isPlaceholder: true,
-      },
+      PLACEHOLDER_IMG: 'unit_icon_0010_1_0.png',
+
       detailedInfo: null,
     };
   },
   computed: {
     ...mapState(['IMAGE_URL_PREFIX', 'FIRST_PICK_IDX', 'gl_picks']),
+
     unit() {
-      let pickedUnit = this.gl_picks[this.pickIndex];
-      return pickedUnit ? pickedUnit : this.placeholder;
+      return this.gl_picks[this.pickIndex];
     },
+
     unitDetailInfoUrl() {
-      return this.unit.pk
+      return this.unit
         ? `https://swarfarm.com/api/bestiary/${this.unit.pk}?format=json`
         : null;
     },
@@ -77,12 +72,15 @@ export default {
         : 'left';
     },
   },
+
   methods: {
     ...mapActions(['unpickUnit']),
+
     unpickSelf() {
       this.unpickUnit(this.pickIndex);
       this.detailedInfo = null;
     },
+
     fetchUnitDetailInfo() {
       if (this.unitDetailInfoUrl) {
         fetch(this.unitDetailInfoUrl, {
@@ -93,6 +91,7 @@ export default {
       }
     },
   },
+
   watch: {
     unitDetailInfoUrl() {
       this.fetchUnitDetailInfo();
@@ -108,7 +107,7 @@ export default {
 .card-body {
   padding: 5px 0px;
 }
-.placeholder {
+.placeholder img {
   opacity: 0.2;
 }
 </style>
