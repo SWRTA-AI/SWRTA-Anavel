@@ -3,35 +3,62 @@
     <b-row>
       <b-col
         class="col-4 px-0 py-0"
-        :class="[isImgOnLeft ? '' : 'order-1']"
+        :class="[imagePosition == 'left' ? '' : 'order-1']"
       >
-        <UnitPickTile v-if="unit != null" :unit="unit" />
+        <b-img
+          v-if="unit != null"
+          :src="IMAGE_URL_PREFIX + unit.image_filename"
+          :alt="unit.name"
+          class="unitPickTile mb-2"
+          @click="unpickSelf"
+        />
       </b-col>
       <b-col class="col-8">
-        Some name description and stuff here Some quick example text
-        to build on the card and make up the bulk of the card's
-        content.
+        {{ unit.name }}
+        ({{ unit.element }})
       </b-col>
     </b-row>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 import UnitPickTile from '@/components/UnitPickTile.vue';
 
 export default {
-  props: {
-    unit: Object,
-    isImgOnLeft: Boolean,
-  },
   components: {
     UnitPickTile,
   },
-  computed: {
-    ...mapState(['IMAGE_URL_PREFIX']),
+  props: {
+    index: Number,
   },
-  methods: {},
+  data() {
+    return {
+      placeholder: {
+        name: 'Slime',
+        image_filename: 'unit_icon_0010_1_0.png',
+        element: 'Fire',
+      },
+    };
+  },
+  computed: {
+    ...mapState(['IMAGE_URL_PREFIX', 'FIRST_PICK_IDX', 'gl_picks']),
+    unit() {
+      let pickedUnit = this.gl_picks[this.index];
+      return pickedUnit ? pickedUnit : this.placeholder;
+    },
+    imagePosition() {
+      return this.FIRST_PICK_IDX.includes(this.index)
+        ? 'right'
+        : 'left';
+    },
+  },
+  methods: {
+    ...mapActions(['unpickUnit']),
+    unpickSelf() {
+      this.unpickUnit(this.index);
+    },
+  },
 };
 </script>
 

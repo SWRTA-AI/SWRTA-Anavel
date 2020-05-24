@@ -8,15 +8,15 @@
     <b-container fluid>
       <b-row>
         <b-col class="col-3">
-          <UnitBox :initUnits="randomUnits" />
+          <UnitBox />
         </b-col>
         <b-col class="col-3 offset-1 mt-5">
-          <UnitPickCard :unit="randomUnits[0]" />
-          <UnitPickCard :unit="randomUnits[1]" />
+          <UnitPickCard :index="0" />
+          <UnitPickCard :index="3" />
         </b-col>
         <b-col class="col-3 offset-1 mt-5">
-          <UnitPickCard :unit="randomUnits[2]" :isImgOnLeft="true" />
-          <UnitPickCard :unit="randomUnits[3]" :isImgOnLeft="true" />
+          <UnitPickCard :index="1" />
+          <UnitPickCard :index="2" />
         </b-col>
       </b-row>
     </b-container>
@@ -35,9 +35,7 @@ export default {
     UnitPickCard,
   },
   data() {
-    return {
-      randomUnits: [],
-    };
+    return {};
   },
   computed: {
     ...mapGetters(['getPicks']),
@@ -49,7 +47,7 @@ export default {
   },
   methods: {
     ...mapActions(['pickUnit']),
-    setRandomUnits() {
+    pickRandomUnits(n) {
       let i = 0;
       let units = [];
       while (i < 25) {
@@ -57,17 +55,16 @@ export default {
         let unit = this.BESTIARY[idx];
         if (units.indexOf(unit) < 0) {
           units.push(unit);
-          if (i < 4) {
+          if (i < n) {
             this.pickUnit({ unit, idx: i });
           }
           i++;
         }
       }
-      this.randomUnits = units;
     },
   },
   mounted() {
-    this.setRandomUnits();
+    this.pickRandomUnits(4);
   },
 };
 </script>

@@ -21,11 +21,9 @@
 
 <script>
 import UnitPickTile from '@/components/UnitPickTile.vue';
+import { mapState } from 'vuex';
 
 export default {
-  props: {
-    initUnits: Array,
-  },
   components: {
     UnitPickTile,
   },
@@ -39,11 +37,27 @@ export default {
     };
   },
   computed: {
+    ...mapState(['BESTIARY']),
+
     unitMatrix() {
       let [...arr] = this.units;
       let result = [];
       while (arr.length && result.length < this.MAX_ROW) {
         result.push(arr.splice(0, this.MAX_COL));
+      }
+      return result;
+    },
+
+    randomUnits() {
+      let i = 0;
+      let result = [];
+      while (i < this.MAX_ROW * this.MAX_COL) {
+        let idx = Math.floor(Math.random() * this.BESTIARY.length);
+        let unit = this.BESTIARY[idx];
+        if (result.indexOf(unit) < 0) {
+          result.push(unit);
+          i++;
+        }
       }
       return result;
     },
@@ -57,7 +71,7 @@ export default {
       }
     },
     resetUnitBox() {
-      this.units = this.initUnits;
+      this.units = this.randomUnits;
     },
   },
   mounted() {

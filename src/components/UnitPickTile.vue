@@ -19,13 +19,12 @@ export default {
   },
   data() {
     return {
-      isSelected: false,
       pickIdx: null,
     };
   },
   computed: {
     ...mapState(['IMAGE_URL_PREFIX', 'gl_picks']),
-    isSelectedComputed() {
+    isSelected() {
       return (
         this.gl_picks.findIndex(x => {
           return x && x.com2us_id == this.unit.com2us_id;
@@ -48,20 +47,17 @@ export default {
     pick() {
       this.pickIdx = this.getCurrentPickIndex();
       this.pickUnit({ unit: this.unit, idx: this.pickIdx });
-      this.isSelected = true;
     },
 
     unpick() {
       this.unpickUnit(this.pickIdx);
       this.pickIdx = null;
-      this.isSelected = false;
     },
 
     refreshState() {
       let idx = this.gl_picks.findIndex(x => {
         return x && x.com2us_id == this.unit.com2us_id;
       });
-      this.isSelected = idx != -1;
       this.pickIdx = idx != -1 ? idx : null;
     },
   },
