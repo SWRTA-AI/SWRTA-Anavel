@@ -24,6 +24,7 @@ export default {
   },
   computed: {
     ...mapState(['IMAGE_URL_PREFIX', 'gl_picks']),
+    ...mapGetters(['getCurrentPickIndex', 'isAbleToPick']),
     isSelected() {
       return (
         this.gl_picks.findIndex(x => {
@@ -33,11 +34,10 @@ export default {
     },
   },
   methods: {
-    ...mapGetters(['getCurrentPickIndex', 'isAbleToPick']),
     ...mapActions(['pickUnit', 'unpickUnit']),
 
     toggleIsSelected() {
-      if (!this.isSelected && this.isAbleToPick()) {
+      if (!this.isSelected && this.isAbleToPick) {
         this.pick();
       } else if (this.isSelected) {
         this.unpick();
@@ -45,7 +45,7 @@ export default {
     },
 
     pick() {
-      this.pickIdx = this.getCurrentPickIndex();
+      this.pickIdx = this.getCurrentPickIndex;
       this.pickUnit({ unit: this.unit, idx: this.pickIdx });
     },
 

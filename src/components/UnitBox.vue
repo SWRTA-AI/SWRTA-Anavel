@@ -14,13 +14,22 @@
           <UnitPickTile :unit="unit" />
         </b-col>
       </b-row>
+      <b-row>
+        <b-form-checkbox
+          v-model="showUnAwakened"
+          name="showUnAwakened"
+          switch
+        >
+          Show unawakened
+        </b-form-checkbox>
+      </b-row>
     </b-container>
   </div>
 </template>
 
 <script>
 import UnitPickTile from '@/components/UnitPickTile.vue';
-import { mapState } from 'vuex';
+import { mapGetters } from 'vuex';
 
 export default {
   components: {
@@ -33,10 +42,11 @@ export default {
 
       units: [],
       searchQuery: '',
+      showUnAwakened: false,
     };
   },
   computed: {
-    ...mapState(['BESTIARY']),
+    ...mapGetters(['getAwakenBestiary']),
 
     unitMatrix() {
       let [...arr] = this.units;
@@ -51,8 +61,10 @@ export default {
       let i = 0;
       let result = [];
       while (i < this.MAX_ROW * this.MAX_COL) {
-        let idx = Math.floor(Math.random() * this.BESTIARY.length);
-        let unit = this.BESTIARY[idx];
+        let idx = Math.floor(
+          Math.random() * this.getAwakenBestiary.length,
+        );
+        let unit = this.getAwakenBestiary[idx];
         if (result.indexOf(unit) < 0) {
           result.push(unit);
           i++;
@@ -66,6 +78,7 @@ export default {
       if (this.searchQuery && this.searchQuery != '') {
         this.units = this.$store.getters.searchBestiary(
           this.searchQuery,
+          this.showUnAwakened,
         );
       }
     },
@@ -80,6 +93,11 @@ export default {
     if (this.searchQuery.length < 1) {
       this.resetUnitBox();
     }
+  },
+  watch: {
+    showUnAwakened() {
+      this.updateUnitBox();
+    },
   },
 };
 </script>

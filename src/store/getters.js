@@ -42,10 +42,19 @@ export default {
     return state.gl_picks.filter(x => x == null).length > 0;
   },
 
+  getAwakenBestiary(state) {
+    return state.BESTIARY.filter(
+      x => Math.floor(x.com2us_id / 10) % 10 == 1,
+    );
+  },
+
   searchBestiary(state) {
-    return query =>
-      state.BESTIARY.filter(x =>
+    return (query, showUnawakened = false) => {
+      return state.BESTIARY.filter(x =>
         x.name.toLowerCase().includes(query.toLowerCase()),
+      ).filter(
+        x => showUnawakened || Math.floor(x.com2us_id / 10) % 10 == 1,
       );
+    };
   },
 };

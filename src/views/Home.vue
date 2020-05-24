@@ -30,8 +30,7 @@ export default {
     PickBanFrame,
   },
   computed: {
-    ...mapGetters(['getPicks']),
-    ...mapState(['BESTIARY']),
+    ...mapGetters(['getPicks', 'getAwakenBestiary']),
 
     showPickNames() {
       return this.getPicks.map(x => (x == null ? x : x.name));
@@ -43,8 +42,10 @@ export default {
       let i = 0;
       let units = [];
       while (i < 25) {
-        let idx = Math.floor(Math.random() * this.BESTIARY.length);
-        let unit = this.BESTIARY[idx];
+        let idx = Math.floor(
+          Math.random() * this.getAwakenBestiary.length,
+        );
+        let unit = this.getAwakenBestiary[idx];
         if (units.indexOf(unit) < 0) {
           units.push(unit);
           if (i < n) {
