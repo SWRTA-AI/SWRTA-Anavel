@@ -14,8 +14,13 @@
         />
       </b-col>
       <b-col class="col-8">
-        {{ unit.name }}
-        ({{ unit.element }})
+        <div v-if="detailedInfo != null" :hidden="unit.isPlaceholder">
+          {{ detailedInfo.name }}
+          ({{ detailedInfo.element }})
+          <br />
+          {{ unit.name }}
+          ({{ unit.element }})
+        </div>
       </b-col>
     </b-row>
   </div>
@@ -38,15 +43,20 @@ export default {
         name: 'Slime',
         image_filename: 'unit_icon_0010_1_0.png',
         element: 'Fire',
+        isPlaceholder: true,
       },
+      unitId: null,
+      detailedInfo: null,
     };
   },
   computed: {
     ...mapState(['IMAGE_URL_PREFIX', 'FIRST_PICK_IDX', 'gl_picks']),
     unit() {
       let pickedUnit = this.gl_picks[this.index];
+      this.unitId = pickedUnit ? pickedUnit.com2us_id : null;
       return pickedUnit ? pickedUnit : this.placeholder;
     },
+
     imagePosition() {
       return this.FIRST_PICK_IDX.includes(this.index)
         ? 'right'
@@ -57,7 +67,27 @@ export default {
     ...mapActions(['unpickUnit']),
     unpickSelf() {
       this.unpickUnit(this.index);
+      this.detailedInfo = null;
     },
+    fetchUnitDetailInfo() {
+      if (this.unit.isPlaceholder) {
+        return;
+      }
+
+      fetch(this.unit.url, {
+        method: 'GET',
+      })
+        .then(response => response.json())
+        .then(data => (this.detailedInfo = data));
+    },
+  },
+  watch: {
+    unitId() {
+      this.fetchUnitDetailInfo();
+    },
+  },
+  updated() {
+    // this.fetchUnitDetailInfo();
   },
 };
 </script>
