@@ -56,19 +56,24 @@ export default {
 
     leaderskill() {
       let skill = this.detailedInfo.leader_skill;
-      if (['Arena', 'General', 'Element'].includes(skill.area)) {
-        let element = skill.element ? `(${skill.element})` : '';
-        let attribute = {
-          'Attack Speed': 'Spd',
-          'Attack Power': 'Atk',
-          Defense: 'Def',
-          HP: 'Hp',
-          'Critical Rate': 'CRate',
-          Resistance: 'Res',
-          Accuracy: 'Acc',
-        }[skill.attribute];
-        return `Lead: ${element} ${attribute} ${skill.amount}%`;
+      if (!skill) {
+        return;
       }
+      let usableArea = ['Arena', 'General', 'Element'];
+      if (!usableArea.includes(skill.area)) {
+        return;
+      }
+      let element = skill.element ? `(${skill.element})` : '';
+      let attribute = {
+        'Attack Speed': 'Spd',
+        'Attack Power': 'Atk',
+        Defense: 'Def',
+        HP: 'Hp',
+        'Critical Rate': 'CRate',
+        Resistance: 'Res',
+        Accuracy: 'Acc',
+      }[skill.attribute];
+      return `Lead: ${element} ${attribute} ${skill.amount}%`;
     },
   },
 
@@ -100,5 +105,8 @@ export default {
 <style scoped>
 img {
   border-radius: 10px;
+}
+.unitPickCardPlaceholderContainer {
+  cursor: pointer;
 }
 </style>

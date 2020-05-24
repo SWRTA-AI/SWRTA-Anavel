@@ -75,6 +75,7 @@ export default {
   max-width: 100% !important;
   border-radius: 8px;
   padding: 3px;
+  cursor: pointer;
 }
 .selected {
   filter: brightness(40%);
