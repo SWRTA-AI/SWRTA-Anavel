@@ -6,29 +6,50 @@
       </b-card-text>
     </div>
     <b-container fluid>
-      <b-col class="col-3">
-        <UnitBox :initUnits="randomUnits" />
-      </b-col>
-      <b-col class="col-9"> </b-col>
+      <b-row>
+        <b-col class="col-3">
+          <UnitBox :initUnits="randomUnits" />
+        </b-col>
+        <b-col class="col-3 offset-1 mt-5">
+          <UnitPickCard :unit="randomUnits[0]" />
+          <UnitPickCard :unit="randomUnits[1]" />
+        </b-col>
+        <b-col class="col-3 offset-1 mt-5">
+          <UnitPickCard :unit="randomUnits[2]" :isImgOnLeft="true" />
+          <UnitPickCard :unit="randomUnits[3]" :isImgOnLeft="true" />
+        </b-col>
+      </b-row>
     </b-container>
-    <b-container> </b-container>
   </div>
 </template>
 
 <script>
 import UnitBox from '@/components/UnitBox.vue';
-import { mapState, mapGetters } from 'vuex';
+import UnitPickCard from '@/components/UnitPickCard.vue';
+import { mapActions, mapState, mapGetters } from 'vuex';
 
 export default {
   name: 'Home',
   components: {
     UnitBox,
+    UnitPickCard,
   },
-  methods: {},
+  data() {
+    return {
+      randomUnits: [],
+    };
+  },
   computed: {
     ...mapGetters(['getPicks']),
     ...mapState(['BESTIARY']),
-    randomUnits() {
+
+    showPickNames() {
+      return this.getPicks.map(x => (x == null ? x : x.name));
+    },
+  },
+  methods: {
+    ...mapActions(['pickUnit']),
+    setRandomUnits() {
       let i = 0;
       let units = [];
       while (i < 25) {
@@ -36,14 +57,17 @@ export default {
         let unit = this.BESTIARY[idx];
         if (units.indexOf(unit) < 0) {
           units.push(unit);
+          if (i < 4) {
+            this.pickUnit({ unit, idx: i });
+          }
           i++;
         }
       }
-      return units;
+      this.randomUnits = units;
     },
-    showPickNames() {
-      return this.getPicks.map(x => (x == null ? x : x.name));
-    },
+  },
+  mounted() {
+    this.setRandomUnits();
   },
 };
 </script>
