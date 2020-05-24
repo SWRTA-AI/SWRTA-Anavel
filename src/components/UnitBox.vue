@@ -1,8 +1,15 @@
 <template>
-  <div>
-    <b-row>Title</b-row>
-    <b-row>Search Bar</b-row>
+  <div class="unitBoxContainer">
     <b-container>
+      <b-row>Unit Box</b-row>
+      <b-row
+        ><b-form-input
+          v-model="searchQuery"
+          placeholder="Search"
+          class="unitBoxSearchBar"
+          @keyup="updateUnitBox"
+        ></b-form-input
+      ></b-row>
       <b-row v-for="(row, i) of unitMatrix" :key="i">
         <b-col v-for="(unit, j) of row" :key="j" class="px-0">
           <UnitPickTile :unit="unit" />
@@ -17,7 +24,7 @@ import UnitPickTile from '@/components/UnitPickTile.vue';
 
 export default {
   props: {
-    units: Array,
+    initUnits: Array,
   },
   components: {
     UnitPickTile,
@@ -26,7 +33,9 @@ export default {
     return {
       MAX_ROW: 5,
       MAX_COL: 5,
-      //   units: [],
+
+      units: [],
+      searchQuery: '',
     };
   },
   computed: {
@@ -39,6 +48,37 @@ export default {
       return result;
     },
   },
-  methods: {},
+  methods: {
+    updateUnitBox() {
+      if (this.searchQuery && this.searchQuery != '') {
+        this.units = this.$store.getters.searchBestiary(
+          this.searchQuery,
+        );
+      }
+    },
+    resetUnitBox() {
+      this.units = this.initUnits;
+    },
+  },
+  mounted() {
+    this.resetUnitBox();
+  },
+  updated() {
+    if (this.searchQuery.length < 1) {
+      this.resetUnitBox();
+    }
+  },
 };
 </script>
+
+<style scoped>
+.unitBoxContainer {
+  background-color: #2a2a2a;
+  padding: 10px;
+}
+.unitBoxSearchBar {
+  margin: 5px 3px 15px 3px;
+  border: 0;
+  background-color: #bbbbbb;
+}
+</style>

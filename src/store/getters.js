@@ -41,4 +41,11 @@ export default {
   isAbleToPick: state => {
     return state.gl_picks.filter(x => x == null).length > 0;
   },
+
+  searchBestiary(state) {
+    return query =>
+      state.BESTIARY.filter(x =>
+        x.name.toLowerCase().includes(query.toLowerCase()),
+      );
+  },
 };

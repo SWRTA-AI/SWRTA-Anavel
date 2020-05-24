@@ -51,15 +51,14 @@ export default {
     },
 
     init() {
-      let idx = this.gl_picks.findIndex(
-        x => x && x.com2us_id == this.unit.com2us_id,
-      );
+      let idx = this.gl_picks.findIndex(x => {
+        return x && x.com2us_id == this.unit.com2us_id;
+      });
       this.isSelected = idx != -1;
       this.pickIdx = idx != -1 ? idx : null;
     },
   },
-
-  mounted() {
+  updated() {
     this.init();
   },
 };
@@ -67,9 +66,11 @@ export default {
 
 <style scoped>
 .unitPickTile {
-  max-width: 5rem !important;
+  max-width: 100% !important;
+  border-radius: 8px;
+  padding: 3px;
 }
 .selected {
-  filter: brightness(30%);
+  filter: brightness(40%);
 }
 </style>

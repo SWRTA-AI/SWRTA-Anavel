@@ -4024,17 +4024,6 @@
     "fusion_food": false
   },
   {
-    "url": "https://swarfarm.com/api/bestiary/1240?format=json",
-    "pk": 1240,
-    "com2us_id": 22505,
-    "name": "Giant Warrior",
-    "image_filename": "unit_icon_0046_4_4.png",
-    "element": "Dark",
-    "archetype": "HP",
-    "base_stars": 4,
-    "fusion_food": false
-  },
-  {
     "url": "https://swarfarm.com/api/bestiary/1233?format=json",
     "pk": 1233,
     "com2us_id": 22405,
@@ -4090,17 +4079,6 @@
     "image_filename": "unit_icon_0046_2_4.png",
     "element": "Wind",
     "archetype": "Defense",
-    "base_stars": 4,
-    "fusion_food": false
-  },
-  {
-    "url": "https://swarfarm.com/api/bestiary/1239?format=json",
-    "pk": 1239,
-    "com2us_id": 22503,
-    "name": "Giant Warrior",
-    "image_filename": "unit_icon_0046_2_4.png",
-    "element": "Wind",
-    "archetype": "HP",
     "base_stars": 4,
     "fusion_food": false
   },

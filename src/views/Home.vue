@@ -7,7 +7,7 @@
     </div>
     <b-container fluid>
       <b-col class="col-3">
-        <UnitBox :units="randomUnits" />
+        <UnitBox :initUnits="randomUnits" />
       </b-col>
       <b-col class="col-9"> </b-col>
     </b-container>
@@ -29,10 +29,15 @@ export default {
     ...mapGetters(['getPicks']),
     ...mapState(['BESTIARY']),
     randomUnits() {
+      let i = 0;
       let units = [];
-      for (let i = 0; i < 25; i++) {
+      while (i < 25) {
         let idx = Math.floor(Math.random() * this.BESTIARY.length);
-        units.push(this.BESTIARY[idx]);
+        let unit = this.BESTIARY[idx];
+        if (units.indexOf(unit) < 0) {
+          units.push(unit);
+          i++;
+        }
       }
       return units;
     },
@@ -42,3 +47,5 @@ export default {
   },
 };
 </script>
+
+<style scoped></style>
