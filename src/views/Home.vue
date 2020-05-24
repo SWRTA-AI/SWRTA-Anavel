@@ -7,22 +7,11 @@
     </div>
     <b-container fluid>
       <b-row>
-        <b-col class="col-3">
+        <b-col class="col-3 ml-5 mt-5">
           <UnitBox />
         </b-col>
-        <b-col class="col-3 offset-1 mt-5">
-          <UnitPickCard
-            v-for="i of FIRST_PICK_IDX"
-            :key="i"
-            :pickIndex="i"
-          />
-        </b-col>
-        <b-col class="col-3 offset-1 mt-5">
-          <UnitPickCard
-            v-for="i of SECOND_PICK_IDX"
-            :key="i"
-            :pickIndex="i"
-          />
+        <b-col class="col-7 mt-5">
+          <PickBanFrame />
         </b-col>
       </b-row>
     </b-container>
@@ -31,21 +20,18 @@
 
 <script>
 import UnitBox from '@/components/UnitBox.vue';
-import UnitPickCard from '@/components/UnitPickCard.vue';
+import PickBanFrame from '@/components/PickBanFrame.vue';
 import { mapActions, mapState, mapGetters } from 'vuex';
 
 export default {
   name: 'Home',
   components: {
     UnitBox,
-    UnitPickCard,
-  },
-  data() {
-    return {};
+    PickBanFrame,
   },
   computed: {
     ...mapGetters(['getPicks']),
-    ...mapState(['BESTIARY', 'FIRST_PICK_IDX', 'SECOND_PICK_IDX']),
+    ...mapState(['BESTIARY']),
 
     showPickNames() {
       return this.getPicks.map(x => (x == null ? x : x.name));
@@ -70,9 +56,8 @@ export default {
     },
   },
   mounted() {
-    this.pickRandomUnits(4);
+    this.pickRandomUnits(5);
   },
 };
 </script>
-
-<style scoped></style>
+3 3
