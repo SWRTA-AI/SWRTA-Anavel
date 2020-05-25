@@ -9,11 +9,7 @@
           @keyup="updateUnitBox"
         ></b-form-input>
       </b-row>
-      <b-row v-for="(row, i) of unitMatrix" :key="i">
-        <b-col v-for="(unit, j) of row" :key="j" class="px-0">
-          <UnitPickTile :unit="unit" />
-        </b-col>
-      </b-row>
+      <UnitBoxGrid :row="MAX_ROW" :col="MAX_COL" :units="units" />
       <b-row>
         <b-form-checkbox
           v-model="showUnAwakened"
@@ -28,12 +24,12 @@
 </template>
 
 <script>
-import UnitPickTile from '@/components/UnitPickTile.vue';
+import UnitBoxGrid from '@/components/UnitBoxGrid.vue';
 import { mapGetters } from 'vuex';
 
 export default {
   components: {
-    UnitPickTile,
+    UnitBoxGrid,
   },
   data() {
     return {
@@ -47,16 +43,6 @@ export default {
   },
   computed: {
     ...mapGetters(['getAwakenBestiary']),
-
-    unitMatrix() {
-      let [...arr] = this.units;
-      let result = [];
-      while (arr.length && result.length < this.MAX_ROW) {
-        result.push(arr.splice(0, this.MAX_COL));
-      }
-      return result;
-    },
-
     randomUnits() {
       let i = 0;
       let result = [];
@@ -89,14 +75,14 @@ export default {
   mounted() {
     this.resetUnitBox();
   },
-  updated() {
-    if (this.searchQuery.length < 1) {
-      this.resetUnitBox();
-    }
-  },
   watch: {
     showUnAwakened() {
       this.updateUnitBox();
+    },
+    searchQuery() {
+      if (this.searchQuery.length < 1) {
+        this.resetUnitBox();
+      }
     },
   },
 };

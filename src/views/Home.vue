@@ -8,6 +8,7 @@
     <b-container fluid>
       <b-row>
         <b-col class="col-3 ml-5 mt-5">
+          <!-- <SuggestionBox /> -->
           <UnitBox />
         </b-col>
         <b-col class="col-7 mt-5">
@@ -20,6 +21,7 @@
 
 <script>
 import UnitBox from '@/components/UnitBox.vue';
+import SuggestionBox from '@/components/SuggestionBox.vue';
 import PickBanFrame from '@/components/PickBanFrame.vue';
 import { mapActions, mapState, mapGetters } from 'vuex';
 
@@ -27,6 +29,7 @@ export default {
   name: 'Home',
   components: {
     UnitBox,
+    SuggestionBox,
     PickBanFrame,
   },
   computed: {
