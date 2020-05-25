@@ -40,18 +40,7 @@ export default {
     layoutType: Number,
     unit: Object,
   },
-  data() {
-    return {
-      detailedInfo: null,
-    };
-  },
   computed: {
-    unitDetailInfoUrl() {
-      return this.unit
-        ? `https://swarfarm.com/api/bestiary/${this.unit.pk}?format=json`
-        : null;
-    },
-
     leaderskill() {
       let skill = this.detailedInfo.leader_skill;
       if (!skill) {
@@ -74,7 +63,14 @@ export default {
       return `Lead: ${element} ${attribute} ${skill.amount}%`;
     },
   },
-
+  asyncComputed: {
+    async detailedInfo() {
+      if (this.unit) {
+        let url = `https://swarfarm.com/api/bestiary/${this.unit.pk}?format=json`;
+        return await this.fetchUnitDetailInfo(url);
+      }
+    },
+  },
   methods: {
     ...mapActions(['unpickUnit']),
 
@@ -83,19 +79,15 @@ export default {
       this.detailedInfo = null;
     },
 
-    fetchUnitDetailInfo() {
-      if (this.unitDetailInfoUrl) {
-        fetch(this.unitDetailInfoUrl, {
-          method: 'GET',
-        })
-          .then(response => response.json())
-          .then(data => (this.detailedInfo = data));
+    async fetchUnitDetailInfo(url) {
+      try {
+        let result = await fetch(url, { method: 'GET' });
+        return result.json();
+      } catch (error) {
+        console.log(error);
+        return null;
       }
     },
-  },
-
-  mounted() {
-    this.fetchUnitDetailInfo();
   },
 };
 </script>
