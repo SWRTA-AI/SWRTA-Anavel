@@ -1,5 +1,5 @@
 <template>
-  <div class="unitBoxGridContainer">
+  <div class="unitBoxGridContainer" v-if="units != null">
     <b-row v-for="(row, i) of unitMatrix" :key="i">
       <b-col v-for="(unit, j) of row" :key="j" class="px-0">
         <UnitPickTile :unit="unit" />

@@ -6,10 +6,7 @@
         :class="[layoutType == 1 ? 'order-1' : '']"
       >
         <div class="mb-3" :class="[isSelecting ? 'glowing' : null]">
-          <b-img
-            :src="IMAGE_URL_PREFIX + PLACEHOLDER_IMG"
-            alt="placeholder"
-          />
+          <b-img :src="PLACEHOLDER_MONSTER_IMG" alt="placeholder" />
         </div>
       </b-col>
       <b-col
@@ -28,15 +25,9 @@ export default {
     pickIndex: Number,
     layoutType: Number,
   },
-  data() {
-    return {
-      PLACEHOLDER_IMG: 'unit_icon_0010_1_0.png',
-    };
-  },
   computed: {
-    ...mapState(['IMAGE_URL_PREFIX']),
     ...mapGetters(['getCurrentPickIndex']),
-
+    ...mapState(['PLACEHOLDER_MONSTER_IMG']),
     isSelecting() {
       return this.getCurrentPickIndex == this.pickIndex;
     },

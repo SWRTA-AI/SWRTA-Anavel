@@ -2,7 +2,7 @@
   <div class="UnitPickTileContainer">
     <div :class="isSelected ? 'selected' : 'not-selected'">
       <b-img
-        :src="IMAGE_URL_PREFIX + unit.image_filename"
+        :src="unit.image_filename"
         :alt="unit.name"
         class="unitPickTile mb-2"
         @click="toggleIsSelected()"
@@ -23,7 +23,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(['IMAGE_URL_PREFIX', 'gl_picks']),
+    ...mapState(['gl_picks']),
     ...mapGetters(['getCurrentPickIndex', 'isAbleToPick']),
     isSelected() {
       return (

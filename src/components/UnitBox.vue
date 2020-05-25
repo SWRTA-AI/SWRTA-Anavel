@@ -41,24 +41,6 @@ export default {
       showUnAwakened: false,
     };
   },
-  computed: {
-    ...mapGetters(['getAwakenBestiary']),
-    randomUnits() {
-      let i = 0;
-      let result = [];
-      while (i < this.MAX_ROW * this.MAX_COL) {
-        let idx = Math.floor(
-          Math.random() * this.getAwakenBestiary.length,
-        );
-        let unit = this.getAwakenBestiary[idx];
-        if (result.indexOf(unit) < 0) {
-          result.push(unit);
-          i++;
-        }
-      }
-      return result;
-    },
-  },
   methods: {
     updateUnitBox() {
       if (this.searchQuery && this.searchQuery != '') {
@@ -69,7 +51,9 @@ export default {
       }
     },
     resetUnitBox() {
-      this.units = this.randomUnits;
+      this.units = this.$store.getters.getRandomUnits(
+        this.MAX_ROW * this.MAX_COL,
+      );
     },
   },
   mounted() {

@@ -6,7 +6,7 @@
         :class="[layoutType == 1 ? 'order-1' : '']"
       >
         <b-img
-          :src="IMAGE_URL_PREFIX + unit.image_filename"
+          :src="unit.image_filename"
           :alt="unit.name"
           class="unitPickTile mb-3"
           @click="unpickSelf"
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapActions } from 'vuex';
 import UnitPickTile from '@/components/UnitPickTile.vue';
 
 export default {
@@ -46,8 +46,6 @@ export default {
     };
   },
   computed: {
-    ...mapState(['IMAGE_URL_PREFIX']),
-
     unitDetailInfoUrl() {
       return this.unit
         ? `https://swarfarm.com/api/bestiary/${this.unit.pk}?format=json`

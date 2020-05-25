@@ -8,7 +8,8 @@
     <b-container fluid>
       <b-row>
         <b-col class="col-3 ml-5 mt-5">
-          <!-- <SuggestionBox /> -->
+          <SuggestionBox />
+          <div class="my-5"></div>
           <UnitBox />
         </b-col>
         <b-col class="col-7 mt-5">
@@ -43,17 +44,14 @@ export default {
     ...mapActions(['pickUnit']),
     pickRandomUnits(n) {
       let i = 0;
-      let units = [];
-      while (i < 25) {
-        let idx = Math.floor(
-          Math.random() * this.getAwakenBestiary.length,
-        );
-        let unit = this.getAwakenBestiary[idx];
-        if (units.indexOf(unit) < 0) {
-          units.push(unit);
-          if (i < n) {
-            this.pickUnit({ unit, idx: i });
-          }
+      let maxCount = this.getAwakenBestiary.length;
+      let usedIdx = [];
+      while (i < n) {
+        let idx = Math.floor(Math.random() * maxCount);
+        if (usedIdx.indexOf(idx) < 0) {
+          usedIdx.push(idx);
+          let unit = this.getAwakenBestiary[idx];
+          this.pickUnit({ unit, idx: i });
           i++;
         }
       }
@@ -64,4 +62,3 @@ export default {
   },
 };
 </script>
-3 3
