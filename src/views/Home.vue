@@ -1,15 +1,10 @@
 <template>
   <div class="home">
-    <div>
-      <b-card-text>
-        {{ showPickNames }}
-      </b-card-text>
-    </div>
     <b-container fluid>
       <b-row>
         <b-col class="col-3 ml-5 mt-5">
           <SuggestionBox />
-          <div class="my-5"></div>
+          <div class="my-3"></div>
           <UnitBox />
         </b-col>
         <b-col class="col-7 mt-5">

@@ -2,7 +2,7 @@
   <div class="suggestionBoxContainer">
     <b-container>
       <b-row>
-        Suggested Picks
+        <b-col class="my-2"><h5>Suggested Picks</h5></b-col>
       </b-row>
       <UnitBoxGrid
         :row="MAX_ROW"
