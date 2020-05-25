@@ -1,7 +1,7 @@
 <template>
   <div class="suggestionBoxContainer">
     <b-container>
-      <b-row class="header mb-2">
+      <b-row class="mb-2 bg-primary">
         <b-col class="py-1 mt-2"><h5>Suggested Picks</h5></b-col>
       </b-row>
       <UnitBoxGrid
@@ -65,9 +65,6 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  background-color: #0275d8;
-}
 .suggestionBoxContainer {
   background-color: #2a2a2a;
   padding: 10px;

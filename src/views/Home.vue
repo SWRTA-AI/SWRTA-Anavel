@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <b-container fluid>
-      <b-row>
-        <b-col class="col-3 ml-5 mt-5">
+      <b-row class="mt-4">
+        <b-col class="col-3 ml-3">
           <SuggestionBox />
           <div class="my-3"></div>
           <UnitBox />
         </b-col>
-        <b-col class="col-7 mt-5">
+        <b-col class="col-7">
           <PickBanFrame />
         </b-col>
       </b-row>
