@@ -1,8 +1,8 @@
 <template>
   <div class="suggestionBoxContainer">
     <b-container>
-      <b-row>
-        <b-col class="my-2"><h5>Suggested Picks</h5></b-col>
+      <b-row class="header mb-2">
+        <b-col class="py-1 mt-2"><h5>Suggested Picks</h5></b-col>
       </b-row>
       <UnitBoxGrid
         :row="MAX_ROW"
@@ -25,23 +25,23 @@ export default {
     return {
       MAX_ROW: 1,
       MAX_COL: 5,
-
-      units: [],
-      searchQuery: '',
-      showUnAwakened: false,
     };
   },
   computed: {
     ...mapState(['SUGGESTION_API_URL']),
-    ...mapGetters(['getPickIds']),
+    ...mapGetters(['getPickIds', 'isAbleToPick']),
   },
   asyncComputed: {
     async suggestedUnits() {
-      return await this.fetchSuggestion({
-        type: 'id',
-        input: this.getPickIds,
-        k: this.MAX_ROW * this.MAX_COL,
-      });
+      if (this.isAbleToPick) {
+        return await this.fetchSuggestion({
+          type: 'id',
+          input: this.getPickIds,
+          k: this.MAX_ROW * this.MAX_COL,
+        });
+      } else {
+        return [];
+      }
     },
   },
   methods: {
@@ -65,6 +65,9 @@ export default {
 </script>
 
 <style scoped>
+.header {
+  background-color: #0275d8;
+}
 .suggestionBoxContainer {
   background-color: #2a2a2a;
   padding: 10px;
