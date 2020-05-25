@@ -41,6 +41,9 @@ export default {
       showUnAwakened: false,
     };
   },
+  computed: {
+    ...mapGetters(['getCurrentPickIndex']),
+  },
   methods: {
     updateUnitBox() {
       if (this.searchQuery && this.searchQuery != '') {
@@ -67,6 +70,9 @@ export default {
       if (this.searchQuery.length < 1) {
         this.resetUnitBox();
       }
+    },
+    getCurrentPickIndex() {
+      this.searchQuery = '';
     },
   },
 };

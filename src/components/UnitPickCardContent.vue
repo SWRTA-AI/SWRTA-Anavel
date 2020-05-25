@@ -9,6 +9,7 @@
           :src="unit.image_filename"
           :alt="unit.name"
           class="unitPickTile mb-3"
+          :class="glowType"
           @click="unpickSelf"
         />
       </b-col>
@@ -28,7 +29,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 import UnitPickTile from '@/components/UnitPickTile.vue';
 
 export default {
@@ -61,6 +62,25 @@ export default {
         Accuracy: 'Acc',
       }[skill.attribute];
       return `Lead: ${element} ${attribute} ${skill.amount}%`;
+    },
+    isBanCandidate() {
+      let { idx: c1 } = this.$store.getters.getBestFirstPickBan;
+      let { idx: c2 } = this.$store.getters.getBestSecondPickBan;
+      return this.pickIndex == c1 || this.pickIndex == c2;
+    },
+    isSubBanCandidate() {
+      let { idx2: c1 } = this.$store.getters.getBestFirstPickBan;
+      let { idx2: c2 } = this.$store.getters.getBestSecondPickBan;
+      return this.pickIndex == c1 || this.pickIndex == c2;
+    },
+    glowType() {
+      if (this.isBanCandidate) {
+        return 'glowing glowing-1';
+      } else if (this.isSubBanCandidate) {
+        return 'glowing glowing-2';
+      } else {
+        return '';
+      }
     },
   },
   asyncComputed: {
@@ -98,5 +118,52 @@ img {
 }
 .unitPickCardPlaceholderContainer {
   cursor: pointer;
+}
+
+@keyframes glowing-1 {
+  0% {
+    background-color: #ffcac8;
+    box-shadow: 0 0 3px #ffcac8;
+  }
+  50% {
+    background-color: #ff625d;
+    box-shadow: 0 0 15px #ff625d;
+  }
+  100% {
+    background-color: #ffcac8;
+    box-shadow: 0 0 3px #ffcac8;
+  }
+}
+
+@keyframes glowing-2 {
+  0% {
+    background-color: #f0e6bc;
+    box-shadow: 0 0 3px #f0e6bc;
+  }
+  50% {
+    background-color: #e0970f;
+    box-shadow: 0 0 15px #e0970f;
+  }
+  100% {
+    background-color: #f0e6bc;
+    box-shadow: 0 0 3px #f0e6bc;
+  }
+}
+
+.glowing {
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+}
+
+.glowing-1 {
+  animation: glowing-1 2000ms infinite;
+}
+
+.glowing-2 {
+  animation: glowing-2 2000ms infinite;
 }
 </style>

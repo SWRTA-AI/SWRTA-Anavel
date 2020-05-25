@@ -29,18 +29,22 @@
         />
       </b-col>
     </b-row>
+    <BanPredictor v-if="!isAbleToPick" />
   </b-container>
 </template>
 
 <script>
 import UnitPickCard from '@/components/UnitPickCard.vue';
-import { mapState, mapActions } from 'vuex';
+import BanPredictor from '@/renderless/BanPredictor.vue';
+import { mapState, mapActions, mapGetters } from 'vuex';
 export default {
   components: {
     UnitPickCard,
+    BanPredictor,
   },
   computed: {
     ...mapState(['FIRST_PICK_IDX', 'SECOND_PICK_IDX']),
+    ...mapGetters(['isAbleToPick']),
   },
   methods: {
     ...mapActions(['resetPicks']),

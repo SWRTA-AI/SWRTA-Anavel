@@ -1,30 +1,36 @@
 import Helper from './helpers.js';
 
 export default {
-  getTeamUnits: state => {
-    let idxes = state.gl_isFirstPick
-      ? state.FIRST_PICK_IDX
-      : state.SECOND_PICK_IDX;
-
+  getFirstPickTeam: state => {
     let result = [];
-    for (let i of idxes) {
+    for (let i of state.FIRST_PICK_IDX) {
       result.push(state.gl_picks[i]);
     }
-
     return result;
   },
 
-  getOpponentTeamUnits: state => {
-    let idxes = state.gl_isFirstPick
-      ? state.SECOND_PICK_IDX
-      : state.FIRST_PICK_IDX;
-
+  getSecondPickTeam: state => {
     let result = [];
-    for (let i of idxes) {
+    for (let i of state.SECOND_PICK_IDX) {
       result.push(state.gl_picks[i]);
     }
-
     return result;
+  },
+
+  getBestFirstPickBan: (state, getters) => {
+    let indexes = state.FIRST_PICK_IDX;
+    let scores = getters.getBanScores;
+    return Helper.findTop2(scores, indexes);
+  },
+
+  getBestSecondPickBan: (state, getters) => {
+    let indexes = state.SECOND_PICK_IDX;
+    let scores = getters.getBanScores;
+    return Helper.findTop2(scores, indexes);
+  },
+
+  getBanScores: state => {
+    return state.gl_ban_suggestions.map(x => (x ? x.score : -1));
   },
 
   getPickCount: state => {

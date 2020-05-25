@@ -40,6 +40,7 @@ export default {
       return await this.fetchSuggestion({
         type: 'id',
         input: this.getPickIds,
+        k: this.MAX_ROW * this.MAX_COL,
       });
     },
   },
