@@ -2,7 +2,7 @@
   <b-container class="unitPickCardPlaceholderContainer">
     <b-row>
       <b-col
-        class="col-3 px-0 py-0"
+        class="col-4 px-0 py-0"
         :class="[layoutType == 1 ? 'order-1' : '']"
       >
         <div class="mb-3" :class="[isSelecting ? 'glowing' : null]">
@@ -10,7 +10,7 @@
         </div>
       </b-col>
       <b-col
-        class="text-area col-9 "
+        class="text-area col-8 "
         :class="[layoutType == 1 ? 'text-right' : 'text-left']"
       >
       </b-col>
@@ -39,6 +39,7 @@ export default {
 img {
   opacity: 0.2;
   border-radius: 10px;
+  max-width: 100%;
 }
 .text-area {
   align-self: center;

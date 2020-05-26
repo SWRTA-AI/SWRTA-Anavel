@@ -1,24 +1,26 @@
 <template>
-  <b-container class="pickBanContainer offset-1">
+  <b-container class="pickBanContainer">
     <b-row class="pt-3 header">
-      <b-col class="title col-10 offset-1 text-center mb-3">
+      <b-col class="title col-8 offset-2 text-center mb-3">
         Pick - Bans
       </b-col>
-      <b-col class="col-1 my-3">
-        <b-button
-          class="resetButton"
-          variant="outline-danger"
-          @click="resetPicks"
-        >
-          <span>reset</span>
-        </b-button>
+      <b-col class="col-2 my-3">
+        <div>
+          <b-button
+            class="resetButton"
+            variant="outline-danger"
+            @click="resetPicks"
+          >
+            reset
+          </b-button>
+        </div>
       </b-col>
     </b-row>
     <b-row class="my-3">
       <b-col class="subtitle text-right">
         First Pick
       </b-col>
-      <b-col class="col-1"></b-col>
+      <b-col class="col-2"></b-col>
       <b-col class="subtitle text-left">
         Second Pick
       </b-col>
@@ -31,7 +33,7 @@
           :pickIndex="i"
         />
       </b-col>
-      <b-col class="col offset-1">
+      <b-col class="col offset-2">
         <UnitPickCard
           v-for="i of SECOND_PICK_IDX"
           :key="i"

@@ -77,6 +77,11 @@ export default {
   padding: 3px;
   cursor: pointer;
 }
+
+.not-selected:hover {
+  filter: brightness(40%);
+}
+
 .selected {
   filter: brightness(40%);
 }

@@ -1,8 +1,8 @@
 <template>
   <b-container class="unitPickCardPlaceholderContainer">
-    <b-row>
+    <b-row class="align-items-center">
       <b-col
-        class="col-3 px-0 py-0"
+        class="col-4 px-0 py-0"
         :class="[layoutType == 1 ? 'order-1' : '']"
       >
         <b-img
@@ -14,15 +14,12 @@
         />
       </b-col>
       <b-col
-        class="col-9 px-4"
+        class="col-8 px-4"
         :class="[layoutType == 1 ? 'text-right' : 'text-left']"
+        :hidden="unit.isPlaceholder"
+        v-if="unit"
       >
-        <div :hidden="unit.isPlaceholder">
-          <div v-if="unit">
-            <h4>{{ unit.name }}</h4>
-          </div>
-          <div v-if="detailedInfo">{{ leaderskill }}</div>
-        </div>
+        <h4 class="mx-3">{{ unit.name }}</h4>
       </b-col>
     </b-row>
   </b-container>
@@ -42,27 +39,6 @@ export default {
     unit: Object,
   },
   computed: {
-    leaderskill() {
-      let skill = this.detailedInfo.leader_skill;
-      if (!skill) {
-        return;
-      }
-      let usableArea = ['Arena', 'General', 'Element'];
-      if (!usableArea.includes(skill.area)) {
-        return;
-      }
-      let element = skill.element ? `(${skill.element})` : '';
-      let attribute = {
-        'Attack Speed': 'Spd',
-        'Attack Power': 'Atk',
-        Defense: 'Def',
-        HP: 'Hp',
-        'Critical Rate': 'CRate',
-        Resistance: 'Res',
-        Accuracy: 'Acc',
-      }[skill.attribute];
-      return `Lead: ${element} ${attribute} ${skill.amount}%`;
-    },
     isBanCandidate() {
       let { idx: c1 } = this.$store.getters.getBestFirstPickBan;
       let { idx: c2 } = this.$store.getters.getBestSecondPickBan;
@@ -83,30 +59,12 @@ export default {
       }
     },
   },
-  asyncComputed: {
-    async detailedInfo() {
-      if (this.unit) {
-        let url = `https://swarfarm.com/api/bestiary/${this.unit.pk}?format=json`;
-        return await this.fetchUnitDetailInfo(url);
-      }
-    },
-  },
   methods: {
     ...mapActions(['unpickUnit']),
 
     unpickSelf() {
       this.unpickUnit(this.pickIndex);
       this.detailedInfo = null;
-    },
-
-    async fetchUnitDetailInfo(url) {
-      try {
-        let result = await fetch(url, { method: 'GET' });
-        return result.json();
-      } catch (error) {
-        console.log(error);
-        return null;
-      }
     },
   },
 };
@@ -115,6 +73,10 @@ export default {
 <style scoped>
 img {
   border-radius: 10px;
+  max-width: 100%;
+}
+img:hover {
+  filter: brightness(40%);
 }
 .unitPickCardPlaceholderContainer {
   cursor: pointer;

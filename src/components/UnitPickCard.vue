@@ -1,18 +1,16 @@
 <template>
   <div class="unitPickCardContainer">
-    <b-row>
-      <Content
-        v-if="unit"
-        :layoutType="layoutType"
-        :pickIndex="pickIndex"
-        :unit="unit"
-      />
-      <Placeholder
-        v-if="unit == null"
-        :layoutType="layoutType"
-        :pickIndex="pickIndex"
-      />
-    </b-row>
+    <Content
+      v-if="unit"
+      :layoutType="layoutType"
+      :pickIndex="pickIndex"
+      :unit="unit"
+    />
+    <Placeholder
+      v-if="unit == null"
+      :layoutType="layoutType"
+      :pickIndex="pickIndex"
+    />
   </div>
 </template>
 
