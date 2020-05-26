@@ -8,8 +8,8 @@ export default {
   FIRST_PICK_IDX: [0, 3, 4, 7, 8],
   SECOND_PICK_IDX: [1, 2, 5, 6, 9],
 
-  IMAGE_URL_PREFIX:
-    'https://swarfarm.com/static/herders/images/monsters/',
+  IMAGE_URL_PREFIX: 'https://swarfarm.com/static/herders/images/',
+
   SUGGESTION_API_URL: 'http://localhost:5001/api/predictor/pick/',
   BAN_API_URL: 'http://localhost:5001/api/predictor/ban/v2/',
   PLACEHOLDER_MONSTER_IMG:
