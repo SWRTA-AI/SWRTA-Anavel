@@ -16,8 +16,8 @@
 
 <script>
 import { mapState } from 'vuex';
-import Content from '@/components/UnitPickCardContent.vue';
-import Placeholder from '@/components/UnitPickCardPlaceholder.vue';
+import Content from '@/components/UnitPickCard/Content.vue';
+import Placeholder from '@/components/UnitPickCard/Placeholder.vue';
 
 export default {
   components: {
