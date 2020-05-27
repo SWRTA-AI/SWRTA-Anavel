@@ -1,6 +1,7 @@
 export default {
   pickUnit: ({ commit }, { unit, idx }) => {
     commit('SET_PICK', { unit, idx });
+    commit('SET_LAST_PICKED', unit);
   },
   unpickUnit: ({ commit }, idx) => {
     commit('SET_PICK', { unit: null, idx });

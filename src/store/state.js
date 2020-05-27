@@ -3,6 +3,7 @@ import bestiaryJSON from '@/data/bestiary.json';
 export default {
   gl_picks: new Array(10).fill(null),
   gl_ban_suggestions: new Array(10).fill(null),
+  gl_last_picked: null,
 
   BESTIARY: bestiaryJSON,
   FIRST_PICK_IDX: [0, 3, 4, 7, 8],

@@ -7,8 +7,11 @@
           <div class="my-3"></div>
           <UnitBox />
         </b-col>
-        <b-col class="col-7">
+        <b-col class="col-5 mx-5">
           <PickBanFrame />
+        </b-col>
+        <b-col class="col-3">
+          <UnitDetailCard />
         </b-col>
       </b-row>
     </b-container>
@@ -19,6 +22,7 @@
 import UnitBox from '@/components/UnitBox.vue';
 import SuggestionBox from '@/components/SuggestionBox.vue';
 import PickBanFrame from '@/components/PickBanFrame.vue';
+import UnitDetailCard from '@/components/UnitDetailCard.vue';
 import { mapActions, mapState, mapGetters } from 'vuex';
 
 export default {
@@ -27,6 +31,7 @@ export default {
     UnitBox,
     SuggestionBox,
     PickBanFrame,
+    UnitDetailCard,
   },
   computed: {
     ...mapGetters(['getPicks', 'getAwakenBestiary']),

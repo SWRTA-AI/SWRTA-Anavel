@@ -52,6 +52,10 @@ export default {
     return state.gl_picks.findIndex(x => x == null);
   },
 
+  getLastPickedUnit: state => {
+    return state.gl_last_picked;
+  },
+
   isAbleToPick: state => {
     return state.gl_picks.filter(x => x == null).length > 0;
   },
