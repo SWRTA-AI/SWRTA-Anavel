@@ -1,5 +1,5 @@
 <template>
-  <b-container class="skillContainer py-3 px-0">
+  <b-container class="skillContainer py-1 px-0">
     <b-row class="title section-info">
       <b-col>
         {{ skill.name }}
@@ -43,6 +43,10 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  background-color: #3f3f3f;
+  padding: 3px 0px;
+}
 .description {
   flex-direction: column;
 }

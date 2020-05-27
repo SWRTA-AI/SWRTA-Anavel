@@ -1,0 +1,1796 @@
+{
+  "SSS": [
+    {
+      "url": "https://swarfarm.com/api/bestiary/695?format=json",
+      "pk": 695,
+      "com2us_id": 17014,
+      "name": "Artamiel",
+      "image_filename": "unit_icon_0019_3_2.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/770?format=json",
+      "pk": 770,
+      "com2us_id": 16615,
+      "name": "Ragdoll",
+      "image_filename": "unit_icon_0025_4_0.png",
+      "element": "Dark",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/782?format=json",
+      "pk": 782,
+      "com2us_id": 15715,
+      "name": "Giana",
+      "image_filename": "unit_icon_0022_4_1.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/721?format=json",
+      "pk": 721,
+      "com2us_id": 18314,
+      "name": "Yeonhong",
+      "image_filename": "unit_icon_0029_3_3.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    }
+  ],
+  "SS": [
+    {
+      "url": "https://swarfarm.com/api/bestiary/703?format=json",
+      "pk": 703,
+      "com2us_id": 16614,
+      "name": "Jager",
+      "image_filename": "unit_icon_0025_3_0.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/940?format=json",
+      "pk": 940,
+      "com2us_id": 20515,
+      "name": "Nephthys",
+      "image_filename": "unit_icon_0039_4_2.png",
+      "element": "Dark",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 24
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1208?format=json",
+      "pk": 1208,
+      "com2us_id": 22215,
+      "name": "Pater",
+      "image_filename": "unit_icon_0046_4_2.png",
+      "element": "Dark",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    }
+  ],
+  "S": [
+    {
+      "url": "https://swarfarm.com/api/bestiary/1339?format=json",
+      "pk": 1339,
+      "com2us_id": 23511,
+      "name": "Barbara",
+      "image_filename": "unit_icon_0054_0_0.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "natural_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1341?format=json",
+      "pk": 1341,
+      "com2us_id": 23513,
+      "name": "Savannah",
+      "image_filename": "unit_icon_0054_2_0.png",
+      "element": "Wind",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "natural_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1312?format=json",
+      "pk": 1312,
+      "com2us_id": 23115,
+      "name": "Beelzebub",
+      "image_filename": "unit_icon_0052_4_4.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "natural_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/942?format=json",
+      "pk": 942,
+      "com2us_id": 20513,
+      "name": "Hathor",
+      "image_filename": "unit_icon_0039_2_2.png",
+      "element": "Wind",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1032?format=json",
+      "pk": 1032,
+      "com2us_id": 21415,
+      "name": "Vivachel",
+      "image_filename": "unit_icon_0043_4_2.png",
+      "element": "Dark",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1167",
+      "pk": 1167,
+      "com2us_id": 21815,
+      "name": "Leona",
+      "image_filename": "unit_icon_0044_4_4.png",
+      "element": "Dark",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/723?format=json",
+      "pk": 723,
+      "com2us_id": 13814,
+      "name": "Akroma",
+      "image_filename": "unit_icon_0014_3_2.png",
+      "element": "Light",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false
+    }
+  ],
+  "A+": [
+    {
+      "url": "https://swarfarm.com/api/bestiary/1206?format=json",
+      "pk": 1206,
+      "com2us_id": 22213,
+      "name": "Taranys",
+      "image_filename": "unit_icon_0046_2_2.png",
+      "element": "Wind",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/992?format=json",
+      "pk": 992,
+      "com2us_id": 21113,
+      "name": "Ganymede",
+      "image_filename": "unit_icon_0040_2_3.png",
+      "element": "Wind",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/290?format=json",
+      "pk": 290,
+      "com2us_id": 18612,
+      "name": "Chiwu",
+      "image_filename": "unit_icon_0031_1_1.png",
+      "element": "Fire",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 24
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/577?format=json",
+      "pk": 577,
+      "com2us_id": 15713,
+      "name": "Seara",
+      "image_filename": "unit_icon_0022_2_1.png",
+      "element": "Wind",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 24
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/294?format=json",
+      "pk": 294,
+      "com2us_id": 13812,
+      "name": "Vanessa",
+      "image_filename": "unit_icon_0014_1_2.png",
+      "element": "Fire",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 33,
+        "Area": "Arena"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/418?format=json",
+      "pk": 418,
+      "com2us_id": 19114,
+      "name": "Fran",
+      "image_filename": "unit_icon_0028_4_0.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 4,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 10
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/994?format=json",
+      "pk": 994,
+      "com2us_id": 21112,
+      "name": "Daphnis",
+      "image_filename": "unit_icon_0040_1_3.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1003?format=json",
+      "pk": 1003,
+      "com2us_id": 21214,
+      "name": "Tian Lang",
+      "image_filename": "unit_icon_0041_3_4.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    }
+  ],
+  "A": [
+    {
+      "url": "https://swarfarm.com/api/bestiary/991?format=json",
+      "pk": 991,
+      "com2us_id": 21114,
+      "name": "Oberon",
+      "image_filename": "unit_icon_0040_3_3.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1030?format=json",
+      "pk": 1030,
+      "com2us_id": 21413,
+      "name": "Triana",
+      "image_filename": "unit_icon_0043_2_2.png",
+      "element": "Wind",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/266?format=json",
+      "pk": 266,
+      "com2us_id": 14712,
+      "name": "Verdehile",
+      "image_filename": "unit_icon_0016_1_2.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false,
+      "atbBoost": 40,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 28,
+        "Area": "Dungeon"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/880?format=json",
+      "pk": 880,
+      "com2us_id": 20114,
+      "name": "Illianna",
+      "image_filename": "unit_icon_0037_3_1.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1041",
+      "pk": 1041,
+      "com2us_id": 21511,
+      "name": "Amelia",
+      "image_filename": "unit_icon_0043_0_4.png",
+      "element": "Water",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1040",
+      "pk": 1040,
+      "com2us_id": 21514,
+      "name": "Eleanor",
+      "image_filename": "unit_icon_0043_3_4.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1042",
+      "pk": 1042,
+      "com2us_id": 21513,
+      "name": "Diana",
+      "image_filename": "unit_icon_0043_2_4.png",
+      "element": "Wind",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/286?format=json",
+      "pk": 286,
+      "com2us_id": 15712,
+      "name": "Juno",
+      "image_filename": "unit_icon_0022_1_1.png",
+      "element": "Fire",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/786?format=json",
+      "pk": 786,
+      "com2us_id": 18615,
+      "name": "Woonsa",
+      "image_filename": "unit_icon_0031_4_1.png",
+      "element": "Dark",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1328?format=json",
+      "pk": 1328,
+      "com2us_id": 15031,
+      "name": "Mina (2A)",
+      "image_filename": "unit_icon_0053_0_2.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "natural_stars": 3,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1323?format=json",
+      "pk": 1323,
+      "com2us_id": 14031,
+      "name": "Vigor (2A)",
+      "image_filename": "unit_icon_0053_0_1.png",
+      "element": "Water",
+      "archetype": "HP",
+      "base_stars": 6,
+      "natural_stars": 3,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1248?format=json",
+      "pk": 1248,
+      "com2us_id": 22611,
+      "name": "Bolverk",
+      "image_filename": "unit_icon_0047_0_2.png",
+      "element": "Water",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/845?format=json",
+      "pk": 845,
+      "com2us_id": 19712,
+      "name": "Okeanos",
+      "image_filename": "unit_icon_0035_1_3.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1281?format=json",
+      "pk": 1281,
+      "com2us_id": 10131,
+      "name": "Elucia (2A)",
+      "image_filename": "unit_icon_0051_0_0.png",
+      "element": "Water",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/268?format=json",
+      "pk": 268,
+      "com2us_id": 17012,
+      "name": "Velajuel",
+      "image_filename": "unit_icon_0019_1_2.png",
+      "element": "Fire",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false,
+      "atbBoost": 30
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/725?format=json",
+      "pk": 725,
+      "com2us_id": 14714,
+      "name": "Julianne",
+      "image_filename": "unit_icon_0016_3_2.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1340?format=json",
+      "pk": 1340,
+      "com2us_id": 23512,
+      "name": "Masha",
+      "image_filename": "unit_icon_0054_1_0.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "natural_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/931?format=json",
+      "pk": 931,
+      "com2us_id": 20614,
+      "name": "Wedjat",
+      "image_filename": "unit_icon_0039_3_0.png",
+      "element": "Light",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 24,
+        "Area": "Arena"
+      }
+    }
+  ],
+  "A-": [
+    {
+      "url": "https://swarfarm.com/api/bestiary/1204?format=json",
+      "pk": 1204,
+      "com2us_id": 22211,
+      "name": "Abellio",
+      "image_filename": "unit_icon_0046_0_2.png",
+      "element": "Water",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/278?format=json",
+      "pk": 278,
+      "com2us_id": 17912,
+      "name": "Raki",
+      "image_filename": "unit_icon_0023_1_1.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/641?format=json",
+      "pk": 641,
+      "com2us_id": 16811,
+      "name": "Shi Hou",
+      "image_filename": "unit_icon_0025_0_4.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/276?format=json",
+      "pk": 276,
+      "com2us_id": 16612,
+      "name": "Laika",
+      "image_filename": "unit_icon_0025_1_0.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/705?format=json",
+      "pk": 705,
+      "com2us_id": 17914,
+      "name": "Asima",
+      "image_filename": "unit_icon_0023_3_1.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/569?format=json",
+      "pk": 569,
+      "com2us_id": 17913,
+      "name": "Ethna",
+      "image_filename": "unit_icon_0023_2_1.png",
+      "element": "Wind",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/719?format=json",
+      "pk": 719,
+      "com2us_id": 18914,
+      "name": "Elenoa",
+      "image_filename": "unit_icon_0033_3_3.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1252?format=json",
+      "pk": 1252,
+      "com2us_id": 22615,
+      "name": "Herteit",
+      "image_filename": "unit_icon_0047_4_2.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/567?format=json",
+      "pk": 567,
+      "com2us_id": 16613,
+      "name": "Leo",
+      "image_filename": "unit_icon_0025_2_0.png",
+      "element": "Wind",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/410?format=json",
+      "pk": 410,
+      "com2us_id": 19314,
+      "name": "Loren",
+      "image_filename": "unit_icon_0032_3_4.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 4,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/258?format=json",
+      "pk": 258,
+      "com2us_id": 13312,
+      "name": "Akia",
+      "image_filename": "unit_icon_0011_1_3.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": true
+    }
+  ],
+  "B+": [
+    {
+      "url": "https://swarfarm.com/api/bestiary/847?format=json",
+      "pk": 847,
+      "com2us_id": 19713,
+      "name": "Triton",
+      "image_filename": "unit_icon_0035_2_3.png",
+      "element": "Wind",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/713?format=json",
+      "pk": 713,
+      "com2us_id": 15714,
+      "name": "Laima",
+      "image_filename": "unit_icon_0022_3_1.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1207?format=json",
+      "pk": 1207,
+      "com2us_id": 22214,
+      "name": "Valantis",
+      "image_filename": "unit_icon_0046_3_2.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/788?format=json",
+      "pk": 788,
+      "com2us_id": 18915,
+      "name": "Lydia",
+      "image_filename": "unit_icon_0033_4_3.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1332?format=json",
+      "pk": 1332,
+      "com2us_id": 15035,
+      "name": "Miho (2A)",
+      "image_filename": "unit_icon_0053_4_2.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "natural_stars": 3,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/649?format=json",
+      "pk": 649,
+      "com2us_id": 18611,
+      "name": "Woosa",
+      "image_filename": "unit_icon_0031_0_1.png",
+      "element": "Water",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/990?format=json",
+      "pk": 990,
+      "com2us_id": 21115,
+      "name": "Nyx",
+      "image_filename": "unit_icon_0040_4_3.png",
+      "element": "Dark",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/242?format=json",
+      "pk": 242,
+      "com2us_id": 16312,
+      "name": "Antares",
+      "image_filename": "unit_icon_0024_1_1.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1031?format=json",
+      "pk": 1031,
+      "com2us_id": 21414,
+      "name": "Celia",
+      "image_filename": "unit_icon_0043_3_2.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1261?format=json",
+      "pk": 1261,
+      "com2us_id": 22714,
+      "name": "Magnum",
+      "image_filename": "unit_icon_0048_3_1.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1579?format=json",
+      "pk": 1579,
+      "com2us_id": 11533,
+      "name": "Bernard (2A)",
+      "image_filename": "unit_icon_0055_0_2.png",
+      "element": "Wind",
+      "archetype": "Support",
+      "base_stars": 6,
+      "natural_stars": 3,
+      "fusion_food": false,
+      "atbBoost": 30,
+      "speedBuff": true
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/993?format=json",
+      "pk": 993,
+      "com2us_id": 21111,
+      "name": "Psamathe",
+      "image_filename": "unit_icon_0040_0_3.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 33,
+        "Area": "Arena"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/836?format=json",
+      "pk": 836,
+      "com2us_id": 19611,
+      "name": "Tetra",
+      "image_filename": "unit_icon_0035_0_0.png",
+      "element": "Water",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/665?format=json",
+      "pk": 665,
+      "com2us_id": 18114,
+      "name": "Dover",
+      "image_filename": "unit_icon_0029_3_1.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1205?format=json",
+      "pk": 1205,
+      "com2us_id": 22212,
+      "name": "Bellenus",
+      "image_filename": "unit_icon_0046_1_2.png",
+      "element": "Fire",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/284?format=json",
+      "pk": 284,
+      "com2us_id": 16112,
+      "name": "Rica",
+      "image_filename": "unit_icon_0022_1_4.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/657?format=json",
+      "pk": 657,
+      "com2us_id": 18014,
+      "name": "Gemini",
+      "image_filename": "unit_icon_0028_3_4.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 19
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/711?format=json",
+      "pk": 711,
+      "com2us_id": 16114,
+      "name": "Lora",
+      "image_filename": "unit_icon_0022_3_4.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/757?format=json",
+      "pk": 757,
+      "com2us_id": 11815,
+      "name": "Aschubel",
+      "image_filename": "unit_icon_0007_4_0.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 24,
+        "Area": "Dungeon"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/944?format=json",
+      "pk": 944,
+      "com2us_id": 20512,
+      "name": "Sekhmet",
+      "image_filename": "unit_icon_0039_1_2.png",
+      "element": "Fire",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1163",
+      "pk": 1163,
+      "com2us_id": 21811,
+      "name": "Josephine",
+      "image_filename": "unit_icon_0044_0_4.png",
+      "element": "Water",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    }
+  ],
+  "B": [
+    {
+      "url": "https://swarfarm.com/api/bestiary/587?format=json",
+      "pk": 587,
+      "com2us_id": 18811,
+      "name": "Aegir",
+      "image_filename": "unit_icon_0032_0_0.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/943?format=json",
+      "pk": 943,
+      "com2us_id": 20511,
+      "name": "Bastet",
+      "image_filename": "unit_icon_0039_0_2.png",
+      "element": "Water",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false,
+      "atbBoost": 25
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/766?format=json",
+      "pk": 766,
+      "com2us_id": 14615,
+      "name": "Zeratu",
+      "image_filename": "unit_icon_0017_4_2.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/998?format=json",
+      "pk": 998,
+      "com2us_id": 21211,
+      "name": "Mo Long",
+      "image_filename": "unit_icon_0041_0_4.png",
+      "element": "Water",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/930?format=json",
+      "pk": 930,
+      "com2us_id": 20615,
+      "name": "Amduat",
+      "image_filename": "unit_icon_0039_4_0.png",
+      "element": "Dark",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/282?format=json",
+      "pk": 282,
+      "com2us_id": 16812,
+      "name": "Mei Hou Wang",
+      "image_filename": "unit_icon_0025_1_4.png",
+      "element": "Fire",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1250?format=json",
+      "pk": 1250,
+      "com2us_id": 22613,
+      "name": "Odin",
+      "image_filename": "unit_icon_0047_2_2.png",
+      "element": "Wind",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1038",
+      "pk": 1038,
+      "com2us_id": 21515,
+      "name": "Alexandra",
+      "image_filename": "unit_icon_0043_4_4.png",
+      "element": "Dark",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1310?format=json",
+      "pk": 1310,
+      "com2us_id": 23113,
+      "name": "Mephisto",
+      "image_filename": "unit_icon_0052_2_4.png",
+      "element": "Wind",
+      "archetype": "HP",
+      "base_stars": 6,
+      "natural_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/288?format=json",
+      "pk": 288,
+      "com2us_id": 14512,
+      "name": "Perna",
+      "image_filename": "unit_icon_0017_1_3.png",
+      "element": "Fire",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/573?format=json",
+      "pk": 573,
+      "com2us_id": 16813,
+      "name": "Xing Zhe",
+      "image_filename": "unit_icon_0025_2_4.png",
+      "element": "Wind",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1297?format=json",
+      "pk": 1297,
+      "com2us_id": 11032,
+      "name": "Raoq",
+      "image_filename": "unit_icon_0051_1_3.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1021?format=json",
+      "pk": 1021,
+      "com2us_id": 21314,
+      "name": "Tablo",
+      "image_filename": "unit_icon_0043_3_0.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 24,
+        "Area": "Arena"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/759?format=json",
+      "pk": 759,
+      "com2us_id": 11915,
+      "name": "Icares",
+      "image_filename": "unit_icon_0009_4_4.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1005?format=json",
+      "pk": 1005,
+      "com2us_id": 21215,
+      "name": "Mi Ying",
+      "image_filename": "unit_icon_0041_4_4.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1258?format=json",
+      "pk": 1258,
+      "com2us_id": 22711,
+      "name": "Covenant",
+      "image_filename": "unit_icon_0048_0_1.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/549?format=json",
+      "pk": 549,
+      "com2us_id": 11813,
+      "name": "Shimitae",
+      "image_filename": "unit_icon_0007_2_0.png",
+      "element": "Wind",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 24,
+        "Area": "Arena"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/753?format=json",
+      "pk": 753,
+      "com2us_id": 18315,
+      "name": "Wolyung",
+      "image_filename": "unit_icon_0029_4_3.png",
+      "element": "Dark",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 28,
+        "Area": "Arena"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/792?format=json",
+      "pk": 792,
+      "com2us_id": 14715,
+      "name": "Cadiz",
+      "image_filename": "unit_icon_0016_4_2.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/764?format=json",
+      "pk": 764,
+      "com2us_id": 17415,
+      "name": "Rahul",
+      "image_filename": "unit_icon_0027_4_1.png",
+      "element": "Dark",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/272?format=json",
+      "pk": 272,
+      "com2us_id": 14612,
+      "name": "Rakan",
+      "image_filename": "unit_icon_0017_1_2.png",
+      "element": "Fire",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1029?format=json",
+      "pk": 1029,
+      "com2us_id": 21412,
+      "name": "Harmonia",
+      "image_filename": "unit_icon_0043_1_2.png",
+      "element": "Fire",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/984?format=json",
+      "pk": 984,
+      "com2us_id": 21012,
+      "name": "Racuni",
+      "image_filename": "unit_icon_0041_1_2.png",
+      "element": "Fire",
+      "archetype": "Support",
+      "base_stars": 4,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/946?format=json",
+      "pk": 946,
+      "com2us_id": 20812,
+      "name": "Bulldozer",
+      "image_filename": "unit_icon_0039_1_4.png",
+      "element": "Fire",
+      "archetype": "HP",
+      "base_stars": 4,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1581?format=json",
+      "pk": 1581,
+      "com2us_id": 11535,
+      "name": "Varus (2A)",
+      "image_filename": "unit_icon_0055_0_4.png",
+      "element": "Dark",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "natural_stars": 3,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/685?format=json",
+      "pk": 685,
+      "com2us_id": 13314,
+      "name": "Aria",
+      "image_filename": "unit_icon_0011_3_3.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/615?format=json",
+      "pk": 615,
+      "com2us_id": 13311,
+      "name": "Izaria",
+      "image_filename": "unit_icon_0011_0_3.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 24,
+        "Area": "Arena"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/804?format=json",
+      "pk": 804,
+      "com2us_id": 17015,
+      "name": "Fermion",
+      "image_filename": "unit_icon_0019_4_2.png",
+      "element": "Dark",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false
+    }
+  ],
+  "C": [
+    {
+      "url": "https://swarfarm.com/api/bestiary/699?format=json",
+      "pk": 699,
+      "com2us_id": 14614,
+      "name": "Shan",
+      "image_filename": "unit_icon_0017_3_2.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false,
+      "atbBoost": 25,
+      "speedBuff": true
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/776?format=json",
+      "pk": 776,
+      "com2us_id": 16815,
+      "name": "Son Zhang Lao",
+      "image_filename": "unit_icon_0025_4_4.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/563?format=json",
+      "pk": 563,
+      "com2us_id": 14613,
+      "name": "Lagmaron",
+      "image_filename": "unit_icon_0017_2_2.png",
+      "element": "Wind",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/583?format=json",
+      "pk": 583,
+      "com2us_id": 18913,
+      "name": "Tiana",
+      "image_filename": "unit_icon_0033_2_3.png",
+      "element": "Wind",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false,
+      "atbBoost": 30
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1343?format=json",
+      "pk": 1343,
+      "com2us_id": 23515,
+      "name": "Xiana",
+      "image_filename": "unit_icon_0054_4_0.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "natural_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/707?format=json",
+      "pk": 707,
+      "com2us_id": 19214,
+      "name": "Elsharion",
+      "image_filename": "unit_icon_0032_3_2.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/633?format=json",
+      "pk": 633,
+      "com2us_id": 14411,
+      "name": "Verad",
+      "image_filename": "unit_icon_0016_0_0.png",
+      "element": "Water",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/778?format=json",
+      "pk": 778,
+      "com2us_id": 13515,
+      "name": "Han",
+      "image_filename": "unit_icon_0013_4_3.png",
+      "element": "Dark",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 30,
+        "Area": "Element"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/526?format=json",
+      "pk": 526,
+      "com2us_id": 13413,
+      "name": "Lushen",
+      "image_filename": "unit_icon_0011_2_2.png",
+      "element": "Wind",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/230?format=json",
+      "pk": 230,
+      "com2us_id": 18012,
+      "name": "Draco",
+      "image_filename": "unit_icon_0028_1_4.png",
+      "element": "Fire",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false,
+      "atbBoost": 30
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/607?format=json",
+      "pk": 607,
+      "com2us_id": 13911,
+      "name": "Julie",
+      "image_filename": "unit_icon_0014_0_4.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1039",
+      "pk": 1039,
+      "com2us_id": 21512,
+      "name": "Helena",
+      "image_filename": "unit_icon_0043_1_4.png",
+      "element": "Fire",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1278?format=json",
+      "pk": 1278,
+      "com2us_id": 22915,
+      "name": "Bella",
+      "image_filename": "unit_icon_0049_4_4.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1342?format=json",
+      "pk": 1342,
+      "com2us_id": 23514,
+      "name": "Narsha",
+      "image_filename": "unit_icon_0054_3_0.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "natural_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/941?format=json",
+      "pk": 941,
+      "com2us_id": 20514,
+      "name": "Isis",
+      "image_filename": "unit_icon_0039_3_2.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/246?format=json",
+      "pk": 246,
+      "com2us_id": 13512,
+      "name": "Garo",
+      "image_filename": "unit_icon_0013_1_3.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 30,
+        "Area": "Element"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1000?format=json",
+      "pk": 1000,
+      "com2us_id": 21213,
+      "name": "Feng Yan",
+      "image_filename": "unit_icon_0041_2_4.png",
+      "element": "Wind",
+      "archetype": "Defense",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/645?format=json",
+      "pk": 645,
+      "com2us_id": 15711,
+      "name": "Praha",
+      "image_filename": "unit_icon_0022_0_1.png",
+      "element": "Water",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/643?format=json",
+      "pk": 643,
+      "com2us_id": 16111,
+      "name": "Anavel",
+      "image_filename": "unit_icon_0022_0_4.png",
+      "element": "Water",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/780?format=json",
+      "pk": 780,
+      "com2us_id": 16115,
+      "name": "Nicki",
+      "image_filename": "unit_icon_0022_4_4.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1164",
+      "pk": 1164,
+      "com2us_id": 21812,
+      "name": "Ophilia",
+      "image_filename": "unit_icon_0044_1_4.png",
+      "element": "Fire",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/575?format=json",
+      "pk": 575,
+      "com2us_id": 16113,
+      "name": "Charlotte",
+      "image_filename": "unit_icon_0022_2_4.png",
+      "element": "Wind",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false,
+      "atbBoost": 20
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/709?format=json",
+      "pk": 709,
+      "com2us_id": 16814,
+      "name": "Qitian Dasheng",
+      "image_filename": "unit_icon_0025_3_4.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/617?format=json",
+      "pk": 617,
+      "com2us_id": 11811,
+      "name": "Tyron",
+      "image_filename": "unit_icon_0007_0_0.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 19
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/858?format=json",
+      "pk": 858,
+      "com2us_id": 19814,
+      "name": "Iris",
+      "image_filename": "unit_icon_0036_3_4.png",
+      "element": "Light",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/613?format=json",
+      "pk": 613,
+      "com2us_id": 18311,
+      "name": "Mihyang",
+      "image_filename": "unit_icon_0029_0_3.png",
+      "element": "Water",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/874?format=json",
+      "pk": 874,
+      "com2us_id": 20112,
+      "name": "Lisa",
+      "image_filename": "unit_icon_0037_1_1.png",
+      "element": "Fire",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/849?format=json",
+      "pk": 849,
+      "com2us_id": 19715,
+      "name": "Manannan",
+      "image_filename": "unit_icon_0035_4_3.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/717?format=json",
+      "pk": 717,
+      "com2us_id": 18614,
+      "name": "Nigong",
+      "image_filename": "unit_icon_0031_3_1.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/772?format=json",
+      "pk": 772,
+      "com2us_id": 17915,
+      "name": "Craka",
+      "image_filename": "unit_icon_0023_4_1.png",
+      "element": "Dark",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/701?format=json",
+      "pk": 701,
+      "com2us_id": 14414,
+      "name": "Zerath",
+      "image_filename": "unit_icon_0016_3_0.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1311?format=json",
+      "pk": 1311,
+      "com2us_id": 23114,
+      "name": "Lucifer",
+      "image_filename": "unit_icon_0052_3_4.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "natural_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1166",
+      "pk": 1166,
+      "com2us_id": 21814,
+      "name": "Jeanne",
+      "image_filename": "unit_icon_0044_3_4.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/697?format=json",
+      "pk": 697,
+      "com2us_id": 17414,
+      "name": "Shazam",
+      "image_filename": "unit_icon_0027_3_1.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/565?format=json",
+      "pk": 565,
+      "com2us_id": 14413,
+      "name": "Jamire",
+      "image_filename": "unit_icon_0016_2_0.png",
+      "element": "Wind",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 24
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/958?format=json",
+      "pk": 958,
+      "com2us_id": 20711,
+      "name": "Chilling",
+      "image_filename": "unit_icon_0040_0_1.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/839?format=json",
+      "pk": 839,
+      "com2us_id": 19615,
+      "name": "Betta",
+      "image_filename": "unit_icon_0035_4_0.png",
+      "element": "Dark",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1197?format=json",
+      "pk": 1197,
+      "com2us_id": 22114,
+      "name": "Felleria",
+      "image_filename": "unit_icon_0046_3_1.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/923?format=json",
+      "pk": 923,
+      "com2us_id": 20411,
+      "name": "Avaris",
+      "image_filename": "unit_icon_0038_0_1.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1326?format=json",
+      "pk": 1326,
+      "com2us_id": 14034,
+      "name": "Eshir (2A)",
+      "image_filename": "unit_icon_0053_3_1.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 6,
+      "natural_stars": 3,
+      "fusion_food": false,
+      "atbBoost": 30,
+      "speedBuff": true
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/280?format=json",
+      "pk": 280,
+      "com2us_id": 19212,
+      "name": "Tesarion",
+      "image_filename": "unit_icon_0032_1_2.png",
+      "element": "Fire",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1175?format=json",
+      "pk": 1175,
+      "com2us_id": 21912,
+      "name": "Shaina",
+      "image_filename": "unit_icon_0045_1_1.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1188?format=json",
+      "pk": 1188,
+      "com2us_id": 22015,
+      "name": "Martina",
+      "image_filename": "unit_icon_0045_4_3.png",
+      "element": "Dark",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/1184?format=json",
+      "pk": 1184,
+      "com2us_id": 22011,
+      "name": "Sabrina",
+      "image_filename": "unit_icon_0045_0_3.png",
+      "element": "Water",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/382?format=json",
+      "pk": 382,
+      "com2us_id": 16513,
+      "name": "Copper",
+      "image_filename": "unit_icon_0025_2_2.png",
+      "element": "Wind",
+      "archetype": "Defense",
+      "base_stars": 4,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/838?format=json",
+      "pk": 838,
+      "com2us_id": 19614,
+      "name": "Molly",
+      "image_filename": "unit_icon_0035_3_0.png",
+      "element": "Light",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/589?format=json",
+      "pk": 589,
+      "com2us_id": 18011,
+      "name": "Orion",
+      "image_filename": "unit_icon_0028_0_4.png",
+      "element": "Water",
+      "archetype": "Support",
+      "base_stars": 5,
+      "fusion_food": false,
+      "atbBoost": 30
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/250?format=json",
+      "pk": 250,
+      "com2us_id": 13912,
+      "name": "Clara",
+      "image_filename": "unit_icon_0014_1_4.png",
+      "element": "Fire",
+      "archetype": "Attack",
+      "base_stars": 5,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/635?format=json",
+      "pk": 635,
+      "com2us_id": 16611,
+      "name": "Chow",
+      "image_filename": "unit_icon_0025_0_0.png",
+      "element": "Water",
+      "archetype": "HP",
+      "base_stars": 6,
+      "fusion_food": false
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/882?format=json",
+      "pk": 882,
+      "com2us_id": 20115,
+      "name": "Sylvia",
+      "image_filename": "unit_icon_0037_4_1.png",
+      "element": "Dark",
+      "archetype": "Support",
+      "base_stars": 6,
+      "fusion_food": false,
+      "leader_skill": {
+        "attribute": "Attack Speed",
+        "amount": 33,
+        "Area": "Guild"
+      }
+    },
+    {
+      "url": "https://swarfarm.com/api/bestiary/691?format=json",
+      "pk": 691,
+      "com2us_id": 18414,
+      "name": "Hwadam",
+      "image_filename": "unit_icon_0030_3_0.png",
+      "element": "Light",
+      "archetype": "HP",
+      "base_stars": 5,
+      "fusion_food": false
+    }
+  ]
+}

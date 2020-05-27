@@ -4,22 +4,29 @@
       <b-col class="col-4 unitPicture">
         <b-img :src="unitPicUrl"></b-img>
       </b-col>
-      <b-col class="col-8 align-self-center">
+      <b-col class="col-5 align-self-center">
         <b-row>
           <b-col class="col-2 unitElement">
             <b-img :src="elementPicUrl"></b-img>
           </b-col>
-          <b-col class="col-9 unitName">
+          <b-col class="col-9 offset-1 unitName">
             {{ unitName }}
           </b-col>
         </b-row>
-        <b-row class="unitStarContainer">
-          <b-col class="col-7">
+        <b-row class="unitStar">
+          <b-col>
             <b-img
               :src="starsPicUrl"
               v-for="i of unitGrade"
               :key="i"
             ></b-img>
+          </b-col>
+        </b-row>
+      </b-col>
+      <b-col class="col-3 align-self-center">
+        <b-row>
+          <b-col class="unitTier" :class="`tier-${unitTier[0]}`">
+            {{ unitTier }}
           </b-col>
         </b-row>
       </b-col>
@@ -51,6 +58,10 @@ export default {
 
     unitGrade() {
       return this.unitInfo.base_stars;
+    },
+
+    unitTier() {
+      return this.$store.getters.getUnitTier(this.unitInfo.com2us_id);
     },
 
     starsPicUrl() {
@@ -97,7 +108,7 @@ export default {
 }
 
 .unitName {
-  font-size: 1.8em;
+  font-size: 1.2vw;
   padding-left: 5px;
   text-align: left;
 }
@@ -113,7 +124,21 @@ export default {
   max-width: 1.5em;
 }
 
-.unitStarContainer img {
+.unitStar {
+  text-align: justify;
+}
+
+.unitStar img {
   max-width: 1em;
+}
+
+.unitTier {
+  max-width: 100%;
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.tier-S {
+  color: rgb(255, 224, 88);
 }
 </style>

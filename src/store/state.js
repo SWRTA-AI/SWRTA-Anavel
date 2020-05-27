@@ -1,4 +1,5 @@
 import bestiaryJSON from '@/data/bestiary.json';
+import tierlistJSON from '@/data/tierlist.json';
 
 export default {
   gl_picks: new Array(10).fill(null),
@@ -6,6 +7,7 @@ export default {
   gl_last_picked: null,
 
   BESTIARY: bestiaryJSON,
+  TIERLIST: tierlistJSON,
   FIRST_PICK_IDX: [0, 3, 4, 7, 8],
   SECOND_PICK_IDX: [1, 2, 5, 6, 9],
 

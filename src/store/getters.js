@@ -62,7 +62,7 @@ export default {
 
   getAwakenBestiary(state) {
     return state.BESTIARY.filter(x => {
-      return Math.floor(x.com2us_id / 10) % 10 == 1;
+      return Math.floor(x.com2us_id / 10) % 10 >= 1;
     }).map(x => {
       return Helper.formatUnit(state, x);
     });
@@ -75,7 +75,7 @@ export default {
       })
         .filter(x => {
           return (
-            showUnawakened || Math.floor(x.com2us_id / 10) % 10 == 1
+            showUnawakened || Math.floor(x.com2us_id / 10) % 10 >= 1
           );
         })
         .map(x => {
@@ -100,5 +100,39 @@ export default {
       }
       return result;
     };
+  },
+
+  getUnitTier(state) {
+    return unitId => {
+      let tierlist = state.TIERLIST;
+      for (let k of Object.keys(tierlist)) {
+        for (let u of tierlist[k]) {
+          if (u.com2us_id == unitId) {
+            return k;
+          }
+        }
+      }
+      return '-';
+    };
+  },
+
+  getTierListIds(state) {
+    let result = {};
+    let tierlist = state.TIERLIST;
+    for (let k of Object.keys(tierlist)) {
+      result[k] = tierlist[k].map(x => x.com2us_id);
+    }
+    return result;
+  },
+
+  getTierList(state) {
+    let result = {};
+    let tierlist = state.TIERLIST;
+    for (let k of Object.keys(tierlist)) {
+      result[k] = tierlist[k].map(x => {
+        return Helper.formatUnit(state, x);
+      });
+    }
+    return result;
   },
 };
