@@ -6,7 +6,7 @@
         :class="[layoutType == 1 ? 'order-1' : '']"
       >
         <div class="mb-3" :class="[isSelecting ? 'glowing' : null]">
-          <b-img :src="PLACEHOLDER_MONSTER_IMG" alt="placeholder" />
+          <b-img :src="placeholderImg" alt="placeholder" />
         </div>
       </b-col>
       <b-col
@@ -19,15 +19,20 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 export default {
   props: {
     pickIndex: Number,
     layoutType: Number,
   },
+  data() {
+    return {
+      placeholderImg:
+        'https://swarfarm.com/static/herders/images/monsters/unit_icon_0010_1_0.png',
+    };
+  },
   computed: {
     ...mapGetters(['getCurrentPickIndex']),
-    ...mapState(['PLACEHOLDER_MONSTER_IMG']),
     isSelecting() {
       return this.getCurrentPickIndex == this.pickIndex;
     },

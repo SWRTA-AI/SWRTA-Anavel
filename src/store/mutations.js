@@ -8,7 +8,7 @@ export default {
     state.gl_picks = picks;
   },
   SET_LAST_PICKED: (state, unit) => {
-    state.gl_last_picked = unit;
+    state.active_unit = unit;
   },
   SET_BAN_SUGGESTION: (state, { unit, idx }) => {
     if (state.gl_ban_suggestions.length > idx) {

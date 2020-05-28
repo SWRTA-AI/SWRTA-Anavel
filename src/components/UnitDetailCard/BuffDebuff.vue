@@ -29,14 +29,14 @@ export default {
     unitInfo: Object,
   },
   computed: {
-    ...mapState(['IMAGE_URL_PREFIX']),
+    ...mapState(['URLS']),
 
     buffDebuff() {
       let result = [];
       for (let skill of this.unitInfo.skills) {
         for (let effect of skill.skill_effect) {
           if (effect.icon_filename.length > 0) {
-            let url = `${this.IMAGE_URL_PREFIX}buffs/${effect.icon_filename}`;
+            let url = `${this.URLS.IMAGE_PREFIX}buffs/${effect.icon_filename}`;
             result.push(url);
           }
         }

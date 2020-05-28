@@ -42,17 +42,17 @@ export default {
     unitInfo: Object,
   },
   computed: {
-    ...mapState(['IMAGE_URL_PREFIX']),
+    ...mapState(['URLS']),
 
     unitName() {
       return this.unitInfo.name;
     },
     unitPicUrl() {
-      return `${this.IMAGE_URL_PREFIX}monsters/${this.unitInfo.image_filename}`;
+      return `${this.URLS.IMAGE_PREFIX}monsters/${this.unitInfo.image_filename}`;
     },
     elementPicUrl() {
       return `${
-        this.IMAGE_URL_PREFIX
+        this.URLS.IMAGE_PREFIX
       }elements/${this.unitInfo.element.toLowerCase()}.png`;
     },
 
@@ -68,7 +68,7 @@ export default {
       let category = this.unitInfo.is_awakened
         ? 'awakened'
         : 'unawakened';
-      return `${this.IMAGE_URL_PREFIX}stars/star-${category}.png`;
+      return `${this.URLS.IMAGE_PREFIX}stars/star-${category}.png`;
     },
   },
 };

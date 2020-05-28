@@ -53,7 +53,7 @@ export default {
   },
 
   getLastPickedUnit: state => {
-    return state.gl_last_picked;
+    return state.active_unit;
   },
 
   isAbleToPick: state => {

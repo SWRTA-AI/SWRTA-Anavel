@@ -40,12 +40,12 @@ export default {
     };
   },
   computed: {
-    ...mapState(['IMAGE_URL_PREFIX']),
+    ...mapState(['URLS']),
 
     skillsPicUrls() {
       let skillsPicUrls = [];
       for (let skill of this.unitInfo.skills) {
-        let url = `${this.IMAGE_URL_PREFIX}skills/${skill.icon_filename}`;
+        let url = `${this.URLS.IMAGE_PREFIX}skills/${skill.icon_filename}`;
         skillsPicUrls.push(url);
       }
       return skillsPicUrls;

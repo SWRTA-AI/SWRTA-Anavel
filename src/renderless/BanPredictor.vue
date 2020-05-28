@@ -4,7 +4,7 @@
 import { mapState, mapActions } from 'vuex';
 export default {
   computed: {
-    ...mapState(['BAN_API_URL']),
+    ...mapState(['URLS']),
     firstTeamIds() {
       let team = this.$store.getters.getFirstPickTeam;
       return team.map(x => x.com2us_id);
@@ -50,7 +50,7 @@ export default {
 
     async fetchBanPrediction(payload) {
       try {
-        let response = await fetch(this.BAN_API_URL, {
+        let response = await fetch(this.URLS.PREDICT_BAN_API, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

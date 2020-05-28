@@ -1,0 +1,61 @@
+{
+    "result": [
+        {
+            "archetype": "Support",
+            "base_stars": 5,
+            "com2us_id": 21413,
+            "element": "Wind",
+            "fusion_food": false,
+            "image_filename": "https://swarfarm.com/static/herders/images/monsters/unit_icon_0043_2_2.png",
+            "name": "Triana",
+            "pk": 1030,
+            "url": "https://swarfarm.com/api/bestiary/1030?format=json"
+        },
+        {
+            "archetype": "Support",
+            "base_stars": 6,
+            "com2us_id": 17014,
+            "element": "Light",
+            "fusion_food": false,
+            "image_filename": "https://swarfarm.com/static/herders/images/monsters/unit_icon_0019_3_2.png",
+            "name": "Artamiel",
+            "pk": 695,
+            "url": "https://swarfarm.com/api/bestiary/695?format=json"
+        },
+        {
+            "archetype": "Support",
+            "base_stars": 6,
+            "com2us_id": 20513,
+            "element": "Wind",
+            "fusion_food": false,
+            "image_filename": "https://swarfarm.com/static/herders/images/monsters/unit_icon_0039_2_2.png",
+            "name": "Hathor",
+            "pk": 942,
+            "url": "https://swarfarm.com/api/bestiary/942?format=json"
+        },
+        {
+            "archetype": "Attack",
+            "base_stars": 6,
+            "com2us_id": 23511,
+            "element": "Water",
+            "fusion_food": false,
+            "image_filename": "https://swarfarm.com/static/herders/images/monsters/unit_icon_0054_0_0.png",
+            "name": "Barbara",
+            "natural_stars": 5,
+            "pk": 1339,
+            "url": "https://swarfarm.com/api/bestiary/1339?format=json"
+        },
+        {
+            "archetype": "Support",
+            "atbBoost": 30,
+            "base_stars": 6,
+            "com2us_id": 17012,
+            "element": "Fire",
+            "fusion_food": false,
+            "image_filename": "https://swarfarm.com/static/herders/images/monsters/unit_icon_0019_1_2.png",
+            "name": "Velajuel",
+            "pk": 268,
+            "url": "https://swarfarm.com/api/bestiary/268?format=json"
+        }
+    ]
+}

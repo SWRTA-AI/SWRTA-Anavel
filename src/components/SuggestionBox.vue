@@ -28,7 +28,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(['SUGGESTION_API_URL']),
+    ...mapState(['URLS', 'DEVELOPMENT_MODE', 'DUMMY_RESPONSE']),
     ...mapGetters(['getPickIds', 'isAbleToPick']),
   },
   asyncComputed: {
@@ -46,8 +46,12 @@ export default {
   },
   methods: {
     async fetchSuggestion(payload) {
+      if (this.DEVELOPMENT_MODE) {
+        return this.DUMMY_RESPONSE['predictPick']['result'];
+      }
+
       try {
-        let response = await fetch(this.SUGGESTION_API_URL, {
+        let response = await fetch(this.URLS.PREDICT_PICK_API, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
