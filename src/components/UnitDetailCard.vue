@@ -1,6 +1,8 @@
 <template>
   <b-container class="UnitDetailCardContainer" v-if="detailedInfo">
     <GeneralSection :unitInfo="detailedInfo" />
+    <RelationFriendSection :unitInfo="detailedInfo" />
+    <RelationCounterSection :unitInfo="detailedInfo" />
     <TraitsSection :unitInfo="detailedInfo" />
     <BuffDebuffSection :unitInfo="detailedInfo" />
     <LeadSection :unitInfo="detailedInfo" />
@@ -10,6 +12,8 @@
 
 <script>
 import GeneralSection from '@/components/UnitDetailCard/General.vue';
+import RelationFriendSection from '@/components/UnitDetailCard/RelationFriend.vue';
+import RelationCounterSection from '@/components/UnitDetailCard/RelationCounter.vue';
 import TraitsSection from '@/components/UnitDetailCard/Traits.vue';
 import BuffDebuffSection from '@/components/UnitDetailCard/BuffDebuff.vue';
 import LeadSection from '@/components/UnitDetailCard/LeaderSkill.vue';
@@ -19,6 +23,8 @@ import { mapState, mapGetters } from 'vuex';
 export default {
   components: {
     GeneralSection,
+    RelationFriendSection,
+    RelationCounterSection,
     TraitsSection,
     BuffDebuffSection,
     LeadSection,

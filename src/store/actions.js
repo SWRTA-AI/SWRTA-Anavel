@@ -16,6 +16,9 @@ export default {
   setFirstPick: ({ commit }, isFirstPick) => {
     commit('SET_FIRST_PICK', isFirstPick);
   },
+  setActiveUnit: ({ commit }, unit) => {
+    commit('SET_ACTIVE_UNIT', unit);
+  },
 
   setBanSuggestion: (
     { commit, state },

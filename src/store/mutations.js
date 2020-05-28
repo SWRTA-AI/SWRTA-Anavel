@@ -21,4 +21,7 @@ export default {
   SET_FIRST_PICK: (state, isFirstPick) => {
     state.gl_isFirstPick = isFirstPick;
   },
+  SET_ACTIVE_UNIT: (state, unit) => {
+    state.active_unit = unit;
+  },
 };
