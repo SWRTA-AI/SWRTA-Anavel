@@ -2,6 +2,7 @@
   <div class="unitBoxGridContainer" v-if="units != null">
     <transition-group
       mode="out-in"
+      appear
       v-on:before-enter="beforeEnter"
       v-on:enter="enter"
       v-on:leave="leave"

@@ -1,7 +1,7 @@
 <template>
   <div class="UnitPickTileContainer">
     <div :class="isSelected ? 'selected' : 'not-selected'">
-      <transition name="fade" mode="out-in">
+      <transition name="fade" mode="out-in" appear>
         <b-img
           :src="unit.image_filename"
           :key="unit.image_filename"
