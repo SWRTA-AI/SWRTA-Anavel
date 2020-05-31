@@ -35,6 +35,7 @@ img {
 
 img:hover {
   filter: brightness(40%);
+  cursor: pointer;
 }
 
 .unitPictureContainer {

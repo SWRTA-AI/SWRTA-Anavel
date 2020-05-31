@@ -67,7 +67,7 @@ export default {
 }
 
 .buffDebuffContainer img {
-  max-width: 2.8em;
+  max-width: 10%;
   border-radius: 5px;
 }
 </style>

@@ -1,21 +1,18 @@
 export default {
   pickUnit: ({ commit }, { unit, idx }) => {
     commit('SET_PICK', { unit, idx });
-    commit('SET_LAST_PICKED', unit);
+    commit('SET_ACTIVE_UNIT', unit);
   },
+
   unpickUnit: ({ commit }, idx) => {
     commit('SET_PICK', { unit: null, idx });
   },
+
   resetPicks: ({ commit }) => {
     commit('SET_PICKS', new Array(10).fill(null));
     commit('SET_BAN_SUGGESTIONS', new Array(10).fill(null));
   },
-  setBannedUnits: ({ commit }, units) => {
-    commit('SET_BAN', units);
-  },
-  setFirstPick: ({ commit }, isFirstPick) => {
-    commit('SET_FIRST_PICK', isFirstPick);
-  },
+
   setActiveUnit: ({ commit }, unit) => {
     commit('SET_ACTIVE_UNIT', unit);
   },

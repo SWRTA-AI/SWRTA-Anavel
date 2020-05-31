@@ -85,7 +85,7 @@ export default {
 }
 
 .skillsContainer img {
-  max-width: 5em;
+  max-width: 75%;
   border-radius: 14px;
   cursor: pointer;
 }
