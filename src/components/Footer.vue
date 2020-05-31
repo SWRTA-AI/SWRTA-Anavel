@@ -1,5 +1,9 @@
 <template>
-  <b-container fluid class="footerContainer bg-info">
+  <b-container
+    fluid
+    class="footerContainer bg-info"
+    v-show="isMounted"
+  >
     <footer>
       <b-row class="py-3">
         <b-col>
@@ -14,6 +18,7 @@
 export default {
   data() {
     return {
+      isMounted: false,
       appName: 'SWRTA-AI',
       version: 'v1.0.0',
       author: 'Jessinra',
@@ -26,6 +31,12 @@ export default {
     currentYear() {
       return new Date().getFullYear();
     },
+  },
+  mounted() {
+    // delay render footer
+    setTimeout(() => {
+      this.isMounted = true;
+    }, 1500);
   },
 };
 </script>

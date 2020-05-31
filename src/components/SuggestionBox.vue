@@ -1,15 +1,19 @@
 <template>
   <div class="suggestionBoxContainer">
-    <b-container>
-      <b-row class="mb-2 bg-primary">
-        <b-col class="py-1 mt-2"><h5>Suggested Picks</h5></b-col>
-      </b-row>
-      <UnitBoxGrid
-        :row="MAX_ROW"
-        :col="MAX_COL"
-        :units="suggestedUnits"
-      />
-    </b-container>
+    <transition name="fade" mode="in-out">
+      <div v-show="isMounted">
+        <b-container>
+          <b-row class="mb-2 bg-primary">
+            <b-col class="py-1 mt-2"><h5>Suggested Picks</h5></b-col>
+          </b-row>
+          <UnitBoxGrid
+            :row="MAX_ROW"
+            :col="MAX_COL"
+            :units="suggestedUnits"
+          />
+        </b-container>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -25,6 +29,7 @@ export default {
     return {
       MAX_ROW: 1,
       MAX_COL: 5,
+      isMounted: false,
     };
   },
   computed: {
@@ -65,6 +70,9 @@ export default {
       }
     },
   },
+  mounted() {
+    this.isMounted = true;
+  },
 };
 </script>
 
@@ -72,5 +80,12 @@ export default {
 .suggestionBoxContainer {
   background-color: #2a2a2a;
   padding: 10px;
+}
+
+.fade-enter-active {
+  transition: opacity 2s ease-out;
+}
+.fade-enter {
+  opacity: 0;
 }
 </style>

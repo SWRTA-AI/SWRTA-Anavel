@@ -1,25 +1,29 @@
 <template>
   <div class="unitBoxContainer">
-    <b-container>
-      <b-row>
-        <b-form-input
-          v-model="searchQuery"
-          placeholder="Type to search"
-          class="unitBoxSearchBar"
-          @keyup="updateUnitBox"
-        ></b-form-input>
-      </b-row>
-      <UnitBoxGrid :row="MAX_ROW" :col="MAX_COL" :units="units" />
-      <b-row>
-        <b-form-checkbox
-          v-model="showUnAwakened"
-          name="showUnAwakened"
-          switch
-        >
-          Show unawakened
-        </b-form-checkbox>
-      </b-row>
-    </b-container>
+    <transition name="fade" mode="in-out">
+      <div v-show="isMounted">
+        <b-container>
+          <b-row>
+            <b-form-input
+              v-model="searchQuery"
+              placeholder="Type to search"
+              class="unitBoxSearchBar"
+              @keyup="updateUnitBox"
+            ></b-form-input>
+          </b-row>
+          <UnitBoxGrid :row="MAX_ROW" :col="MAX_COL" :units="units" />
+          <b-row>
+            <b-form-checkbox
+              v-model="showUnAwakened"
+              name="showUnAwakened"
+              switch
+            >
+              Show unawakened
+            </b-form-checkbox>
+          </b-row>
+        </b-container>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -35,6 +39,7 @@ export default {
     return {
       MAX_ROW: 5,
       MAX_COL: 5,
+      isMounted: false,
 
       units: [],
       searchQuery: '',
@@ -61,6 +66,7 @@ export default {
   },
   mounted() {
     this.resetUnitBox();
+    this.isMounted = true;
   },
   watch: {
     showUnAwakened() {
@@ -87,5 +93,12 @@ export default {
   margin: 5px 3px 15px 3px;
   border: 0;
   background-color: #bbbbbb;
+}
+
+.fade-enter-active {
+  transition: opacity 2s ease-out;
+}
+.fade-enter {
+  opacity: 0;
 }
 </style>

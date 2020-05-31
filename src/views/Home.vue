@@ -1,20 +1,24 @@
 <template>
   <div class="home">
-    <b-container fluid>
-      <b-row class="mt-4">
-        <b-col class="col-3 ml-3">
-          <SuggestionBox />
-          <div class="my-3"></div>
-          <UnitBox />
-        </b-col>
-        <b-col class="col-5 mx-5">
-          <PickBanFrame />
-        </b-col>
-        <b-col class="col-3">
-          <UnitDetailCard />
-        </b-col>
-      </b-row>
-    </b-container>
+    <transition name="fade" mode="in-out">
+      <div v-show="isMounted">
+        <b-container fluid>
+          <b-row class="mt-4">
+            <b-col class="col-3 ml-3">
+              <SuggestionBox />
+              <div class="my-3"></div>
+              <UnitBox />
+            </b-col>
+            <b-col class="col-5 mx-5">
+              <PickBanFrame />
+            </b-col>
+            <b-col class="col-3">
+              <UnitDetailCard />
+            </b-col>
+          </b-row>
+        </b-container>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -32,6 +36,11 @@ export default {
     SuggestionBox,
     PickBanFrame,
     UnitDetailCard,
+  },
+  data() {
+    return {
+      isMounted: false,
+    };
   },
   computed: {
     ...mapGetters(['getPicks', 'getAwakenBestiary']),
@@ -59,6 +68,16 @@ export default {
   },
   mounted() {
     this.pickRandomUnits(5);
+    this.isMounted = true;
   },
 };
 </script>
+
+<style scoped>
+.fade-enter-active {
+  transition: opacity 3s ease-out;
+}
+.fade-enter {
+  opacity: 0;
+}
+</style>
