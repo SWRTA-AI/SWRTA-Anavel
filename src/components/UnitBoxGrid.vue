@@ -1,6 +1,11 @@
 <template>
   <div class="unitBoxGridContainer" v-if="units != null">
-    <transition-group name="list-complete" mode="out-in">
+    <transition-group
+      mode="out-in"
+      v-on:before-enter="beforeEnter"
+      v-on:enter="enter"
+      v-on:leave="leave"
+    >
       <b-row v-for="(row, i) of unitMatrix" :key="i">
         <b-col v-for="(unit, j) of row" :key="j" class="px-0">
           <UnitPickTile :unit="unit" />
@@ -12,6 +17,7 @@
 
 <script>
 import UnitPickTile from '@/components/UnitPickTile.vue';
+import Velocity from 'velocity-animate';
 
 export default {
   components: {
@@ -32,21 +38,27 @@ export default {
       return result;
     },
   },
+  methods: {
+    beforeEnter: function(el) {
+      el.style.opacity = 0;
+      el.style.height = 0;
+    },
+    enter: function(el, done) {
+      var delay = el.dataset.index * 150;
+      setTimeout(function() {
+        Velocity(
+          el,
+          { opacity: 1, height: '100%' },
+          { complete: done },
+        );
+      }, delay);
+    },
+    leave: function(el, done) {
+      var delay = el.dataset.index * 150;
+      setTimeout(function() {
+        Velocity(el, { opacity: 0, height: 0 }, { complete: done });
+      }, delay);
+    },
+  },
 };
 </script>
-
-<style scoped>
-.list-complete-item {
-  transition: all 1s;
-  display: inline-block;
-  margin-right: 10px;
-}
-.list-complete-enter,
-.list-complete-leave-to {
-  opacity: 0;
-  transform: translateY(30px);
-}
-.list-complete-leave-active {
-  position: absolute;
-}
-</style>
