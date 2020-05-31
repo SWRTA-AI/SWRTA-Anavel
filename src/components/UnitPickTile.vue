@@ -1,12 +1,15 @@
 <template>
   <div class="UnitPickTileContainer">
     <div :class="isSelected ? 'selected' : 'not-selected'">
-      <b-img
-        :src="unit.image_filename"
-        :alt="unit.name"
-        class="unitPickTile mb-2"
-        @click="toggleIsSelected()"
-      />
+      <transition name="fade" mode="out-in">
+        <b-img
+          :src="unit.image_filename"
+          :key="unit.image_filename"
+          :alt="unit.name"
+          class="unitPickTile mb-2"
+          @click="toggleIsSelected()"
+        />
+      </transition>
     </div>
   </div>
 </template>
@@ -84,5 +87,14 @@ export default {
 
 .selected {
   filter: brightness(40%);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

@@ -1,10 +1,12 @@
 <template>
   <div class="unitBoxGridContainer" v-if="units != null">
-    <b-row v-for="(row, i) of unitMatrix" :key="i">
-      <b-col v-for="(unit, j) of row" :key="j" class="px-0">
-        <UnitPickTile :unit="unit" />
-      </b-col>
-    </b-row>
+    <transition-group name="list-complete" mode="out-in">
+      <b-row v-for="(row, i) of unitMatrix" :key="i">
+        <b-col v-for="(unit, j) of row" :key="j" class="px-0">
+          <UnitPickTile :unit="unit" />
+        </b-col>
+      </b-row>
+    </transition-group>
   </div>
 </template>
 
@@ -32,3 +34,19 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.list-complete-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-complete-enter,
+.list-complete-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.list-complete-leave-active {
+  position: absolute;
+}
+</style>
