@@ -1,15 +1,15 @@
 <template>
   <b-container class="generalInfoContainer section">
     <b-row>
-      <b-col class="col-xl-3 unitPicture text-center">
+      <b-col class="col-lg-3 unitPicture text-center">
         <FadeImage :src="unitPicUrl" />
       </b-col>
-      <b-col class="col-xl-6 align-self-center">
+      <b-col class="col-lg-7 align-self-center">
         <b-row>
-          <b-col class="col-xl-4 unitElement text-right">
+          <b-col class="col-lg-3 unitElement text-right">
             <b-img :src="elementPicUrl"></b-img>
           </b-col>
-          <b-col class="col-xl-8 unitName text-left">
+          <b-col class="col-lg-9 unitName text-left">
             {{ unitName }}
           </b-col>
         </b-row>
@@ -23,12 +23,10 @@
           </b-col>
         </b-row>
       </b-col>
-      <b-col class="col-xl-3 align-self-center">
-        <b-row>
-          <b-col class="unitTier" :class="`tier-${unitTier[0]}`">
-            {{ unitTier }}
-          </b-col>
-        </b-row>
+      <b-col class="unitTierContainer col-lg-2">
+        <div class="unitTier" :class="`tier-${unitTier}`">
+          {{ unitTier }}
+        </div>
       </b-col>
     </b-row>
   </b-container>
@@ -128,11 +126,24 @@ export default {
   max-width: 1em;
 }
 
+.unitTierContainer {
+  padding: 0px;
+  align-self: center;
+  text-align: center;
+}
+
 .unitTier {
   max-width: 100%;
   font-size: 2vw;
   font-weight: 700;
-  margin-left: 10px;
+}
+.tier-SSS {
+  color: rgb(255, 224, 88);
+  font-size: 1.5vw;
+}
+.tier-SS {
+  color: rgb(255, 224, 88);
+  font-size: 1.7vw;
 }
 .tier-S {
   color: rgb(255, 224, 88);

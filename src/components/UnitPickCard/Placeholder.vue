@@ -50,25 +50,25 @@ img {
 @keyframes glowing {
   0% {
     background-color: #e4e6c1;
-    box-shadow: 0 0 3px #e4e6c1;
+    box-shadow: 0 0 1vw #e4e6c1;
   }
   50% {
     background-color: #ffeb93;
-    box-shadow: 0 0 15px #ffdd93;
+    box-shadow: 0 0 2vw #ffdd93;
   }
   100% {
     background-color: #e4e6c1;
-    box-shadow: 0 0 3px #e4e6c1;
+    box-shadow: 0 0 1vw #e4e6c1;
   }
 }
 
 .glowing {
   -webkit-border-radius: 10px;
-  border-radius: 10px;
+  border-radius: 10%;
   border: none;
   cursor: pointer;
   display: inline-block;
-  padding: 5px;
+  padding: 5%;
 
   animation: glowing 1300ms infinite;
 }

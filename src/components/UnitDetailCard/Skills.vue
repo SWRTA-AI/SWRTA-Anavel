@@ -92,4 +92,10 @@ export default {
 .skillsContainer .inactive >>> img:hover {
   filter: brightness(80%);
 }
+
+@media screen and (max-width: 1200px) {
+  .skillsContainer >>> img {
+    max-width: 100%;
+  }
+}
 </style>

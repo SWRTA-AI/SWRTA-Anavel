@@ -44,5 +44,6 @@ export default {
 <style scoped>
 .footerContainer {
   padding: 15px;
+  margin-top: 30px;
 }
 </style>

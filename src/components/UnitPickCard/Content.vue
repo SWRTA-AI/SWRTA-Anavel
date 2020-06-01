@@ -89,40 +89,40 @@ img:hover {
 @keyframes glowing-1 {
   0% {
     background-color: #ffcac8;
-    box-shadow: 0 0 3px #ffcac8;
+    box-shadow: 0 0 1vw #ffcac8;
   }
   50% {
     background-color: #ff625d;
-    box-shadow: 0 0 15px #ff625d;
+    box-shadow: 0 0 2vw #ff625d;
   }
   100% {
     background-color: #ffcac8;
-    box-shadow: 0 0 3px #ffcac8;
+    box-shadow: 0 0 1vw #ffcac8;
   }
 }
 
 @keyframes glowing-2 {
   0% {
     background-color: #f0e6bc;
-    box-shadow: 0 0 3px #f0e6bc;
+    box-shadow: 0 0 1vw #f0e6bc;
   }
   50% {
     background-color: #e0970f;
-    box-shadow: 0 0 15px #e0970f;
+    box-shadow: 0 0 2vw #e0970f;
   }
   100% {
     background-color: #f0e6bc;
-    box-shadow: 0 0 3px #f0e6bc;
+    box-shadow: 0 0 1vw #f0e6bc;
   }
 }
 
 .glowing {
   -webkit-border-radius: 15px;
-  border-radius: 15px;
+  border-radius: 10%;
   border: none;
   cursor: pointer;
   display: inline-block;
-  padding: 5px;
+  padding: 5%;
 }
 
 .glowing-1 {

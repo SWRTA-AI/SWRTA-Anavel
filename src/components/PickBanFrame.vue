@@ -4,17 +4,15 @@
       <b-col class="title col-8 offset-2 text-center mb-3">
         SWRTA Pick - Bans
       </b-col>
-      <b-col class="col-2 my-3">
-        <div>
-          <b-button
-            class="resetButton"
-            :class="[isAbleToPick ? '' : 'active']"
-            variant="outline-danger"
-            @click="resetPicks"
-          >
-            Reset
-          </b-button>
-        </div>
+      <b-col class="col-2">
+        <b-button
+          class="resetButton"
+          :class="[isAbleToPick ? '' : 'active']"
+          variant="outline-danger"
+          @click="resetPicks"
+        >
+          Reset
+        </b-button>
       </b-col>
     </b-row>
     <b-row class="my-3">
@@ -34,7 +32,7 @@
           :pickIndex="i"
         />
       </b-col>
-      <b-col class="col offset-2">
+      <b-col class="col offset-xl-1">
         <UnitPickCard
           v-for="i of SECOND_PICK_IDX"
           :key="i"
