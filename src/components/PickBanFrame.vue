@@ -8,10 +8,11 @@
         <div>
           <b-button
             class="resetButton"
+            :class="[isAbleToPick ? '' : 'active']"
             variant="outline-danger"
             @click="resetPicks"
           >
-            reset
+            Reset
           </b-button>
         </div>
       </b-col>
