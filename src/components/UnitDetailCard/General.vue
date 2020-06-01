@@ -84,14 +84,6 @@ export default {
   margin: 20px 0px;
 }
 
-.section-title {
-  background-color: #3f3f3f;
-  font-weight: 700;
-  font-size: 0.9vw;
-  margin: 0px;
-  padding: 3px 0px;
-}
-
 .section-info {
   margin: 0px;
   padding: 5px 0px;

@@ -1,10 +1,6 @@
 <template>
   <b-container class="skillContainer py-1 px-0">
-    <b-row class="title section-info">
-      <b-col>
-        {{ skill.name }}
-      </b-col>
-    </b-row>
+    <SectionTitle :title="skill.name" class="title" />
 
     <b-row class="description section-info text-justify">
       <b-col> {{ skill.description }} {{ cooldown }}</b-col>
@@ -25,7 +21,11 @@
 </template>
 
 <script>
+import SectionTitle from '@/components/UnitDetailCard/SectionTitle.vue';
 export default {
+  components: {
+    SectionTitle,
+  },
   props: {
     skill: Object,
   },
@@ -44,8 +44,7 @@ export default {
 
 <style scoped>
 .title {
-  background-color: #3f3f3f;
-  padding: 3px 0px;
+  margin-top: 0.3vw;
 }
 .description {
   flex-direction: column;
@@ -56,10 +55,5 @@ export default {
 
 .section-info {
   margin: 7px auto;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 0.9vw;
 }
 </style>

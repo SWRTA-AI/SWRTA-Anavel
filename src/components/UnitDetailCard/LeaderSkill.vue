@@ -3,11 +3,8 @@
     class="leaderskillContainer section"
     v-if="leaderskill"
   >
-    <b-row class="section-title">
-      <b-col>
-        Leads (RTA)
-      </b-col>
-    </b-row>
+    <SectionTitle title="Leads (RTA)" />
+
     <b-row class="section-info">
       <b-col> {{ leaderskill }}</b-col>
     </b-row>
@@ -16,8 +13,12 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex';
+import SectionTitle from '@/components/UnitDetailCard/SectionTitle.vue';
 
 export default {
+  components: {
+    SectionTitle,
+  },
   props: {
     unitInfo: Object,
   },
@@ -52,14 +53,6 @@ export default {
   background-color: #4f4f4f;
   margin: 20px 0px;
   padding: 0;
-}
-
-.section-title {
-  background-color: #3f3f3f;
-  font-weight: 700;
-  font-size: 0.9vw;
-  margin: 0px;
-  padding: 3px 0px;
 }
 
 .section-info {

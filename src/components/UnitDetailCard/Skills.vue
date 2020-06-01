@@ -1,10 +1,6 @@
 <template>
   <b-container class="skillsContainer section">
-    <b-row class="section-title">
-      <b-col>
-        Skills
-      </b-col>
-    </b-row>
+    <SectionTitle title="Skills" />
 
     <b-row class="section-info">
       <b-col v-for="(url, i) of skillsPicUrls" :key="i">
@@ -28,11 +24,13 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex';
+import SectionTitle from '@/components/UnitDetailCard/SectionTitle.vue';
 import SkillDetail from '@/components/UnitDetailCard/SkillDetails.vue';
 import FadeImage from '@/components/Transition/FadeImage.vue';
 
 export default {
   components: {
+    SectionTitle,
     SkillDetail,
     FadeImage,
   },
@@ -76,22 +74,14 @@ export default {
   padding: 0;
 }
 
-.section-title {
-  background-color: #3f3f3f;
-  font-weight: 700;
-  font-size: 0.9vw;
-  margin: 0px;
-  padding: 3px 0px;
-}
-
 .section-info {
   margin: 0px;
-  padding: 15px 0px 5px 0px;
+  padding: 0.4vw 0px 0px 0px;
 }
 
 .skillsContainer >>> img {
-  max-width: 75%;
-  border-radius: 14px;
+  max-width: 80%;
+  border-radius: 10%;
   cursor: pointer;
 }
 
