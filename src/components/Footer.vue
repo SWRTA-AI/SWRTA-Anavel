@@ -5,7 +5,7 @@
     v-show="isMounted"
   >
     <footer>
-      <b-row class="py-3">
+      <b-row>
         <b-col>
           {{ footerText }}
         </b-col>
@@ -43,6 +43,6 @@ export default {
 
 <style scoped>
 .footerContainer {
-  margin-top: 150px;
+  padding: 15px;
 }
 </style>

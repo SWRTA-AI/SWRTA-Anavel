@@ -40,10 +40,13 @@ export default {
 </script>
 
 <style scoped>
+.tierlist {
+  margin-bottom: 50px;
+}
+
 .credit {
   font-size: 1.5em;
   margin-top: 2em;
-  margin-bottom: -4em;
 }
 
 .credit a {

@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <NavBar />
-    <b-container fluid>
-      <router-view />
-    </b-container>
-    <Footer />
+    <div class="flex-wrapper">
+      <b-container fluid>
+        <router-view />
+      </b-container>
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -32,5 +34,13 @@ html {
   text-align: center;
   color: #ffffff;
   background-color: #121212 !important;
+}
+
+// force footer on the ground
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 </style>
