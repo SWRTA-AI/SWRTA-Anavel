@@ -1,7 +1,11 @@
 <template>
   <div class="UnitPickTileContainer">
     <div
-      :class="isSelected ? 'selected' : 'not-selected'"
+      :class="
+        this.isAbleToPick && !this.isSelected
+          ? 'not-selected'
+          : 'selected'
+      "
       class="unitPickTile mb-2"
       @click="toggleIsSelected()"
     >
