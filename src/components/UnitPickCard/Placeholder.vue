@@ -46,11 +46,6 @@ img {
   border-radius: 10px;
   max-width: 100%;
 }
-.text-area {
-  align-self: center;
-  font-size: 1.3em;
-  opacity: 0.7;
-}
 
 @keyframes glowing {
   0% {

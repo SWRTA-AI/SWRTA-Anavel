@@ -60,7 +60,7 @@ export default {
 .section-title {
   background-color: #3f3f3f;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 0.9vw;
   margin: 0px;
   padding: 3px 0px;
 }

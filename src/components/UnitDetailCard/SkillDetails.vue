@@ -60,6 +60,6 @@ export default {
 
 .title {
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 0.9vw;
 }
 </style>

@@ -70,15 +70,16 @@ export default {
   background-color: #2a2a2a;
 }
 .title {
-  font-size: 3em !important;
+  font-size: 2.8vw;
   margin-right: -1.3rem;
 }
+
 .subtitle {
-  font-size: 1.3em;
-  /* margin: 0 0px 20px 0px; */
+  font-size: 1.3vw;
 }
+
 .resetButton {
-  font-size: 1.15em;
+  font-size: 1vw;
 }
 
 .header {

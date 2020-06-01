@@ -87,7 +87,7 @@ export default {
 .section-title {
   background-color: #3f3f3f;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 0.9vw;
   margin: 0px;
   padding: 3px 0px;
 }
@@ -138,7 +138,7 @@ export default {
 
 .unitTier {
   max-width: 100%;
-  font-size: 2.2em;
+  font-size: 2vw;
   font-weight: 700;
   margin-left: 10px;
 }

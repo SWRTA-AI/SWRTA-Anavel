@@ -19,7 +19,7 @@
         :hidden="unit.isPlaceholder"
         v-if="unit"
       >
-        <h4 class="mx-3">{{ unit.name }}</h4>
+        <div class="unitName mx-3">{{ unit.name }}</div>
       </b-col>
     </b-row>
   </b-container>
@@ -80,6 +80,10 @@ img:hover {
 }
 .unitPickCardPlaceholderContainer {
   cursor: pointer;
+}
+
+.unitName {
+  font-size: 1.1vw;
 }
 
 @keyframes glowing-1 {

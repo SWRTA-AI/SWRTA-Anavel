@@ -49,4 +49,8 @@ export default {
 .credit a {
   text-decoration: none;
 }
+
+.tierlist >>> img {
+  max-width: 100%;
+}
 </style>
