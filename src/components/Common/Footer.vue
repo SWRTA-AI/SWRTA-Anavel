@@ -20,7 +20,7 @@ export default {
     return {
       isMounted: false,
       appName: 'SWRTA-AI',
-      version: 'v1.0.0',
+      version: 'v0.9.0',
       author: 'Jessinra',
     };
   },
