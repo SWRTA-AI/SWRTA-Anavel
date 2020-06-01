@@ -2,7 +2,7 @@
   <b-container class="pickBanContainer">
     <b-row class="pt-3 header">
       <b-col class="title col-8 offset-2 text-center mb-3">
-        Pick - Bans
+        SWRTA Pick - Bans
       </b-col>
       <b-col class="col-2 my-3">
         <div>
@@ -70,7 +70,7 @@ export default {
   background-color: #2a2a2a;
 }
 .title {
-  font-size: 2.8vw;
+  font-size: 1.8vw;
   margin-right: -1.3rem;
 }
 

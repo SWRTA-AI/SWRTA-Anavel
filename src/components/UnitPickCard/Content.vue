@@ -1,6 +1,6 @@
 <template>
   <b-container class="unitPickCardPlaceholderContainer">
-    <b-row class="align-items-center">
+    <b-row class="align-items-center mb-3">
       <b-col
         class="col-4 px-0 py-0"
         :class="[layoutType == 1 ? 'order-1' : '']"
@@ -8,18 +8,18 @@
         <b-img
           :src="unit.image_filename"
           :alt="unit.name"
-          class="unitPickTile mb-3"
+          class="unitPickTile"
           :class="glowType"
           @click="unpickSelf"
         />
       </b-col>
       <b-col
-        class="col-8 px-4"
+        class="unitName col-8 px-3"
         :class="[layoutType == 1 ? 'text-right' : 'text-left']"
         :hidden="unit.isPlaceholder"
         v-if="unit"
       >
-        <div class="unitName mx-3">{{ unit.name }}</div>
+        {{ unit.name }}
       </b-col>
     </b-row>
   </b-container>

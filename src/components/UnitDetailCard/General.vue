@@ -1,20 +1,20 @@
 <template>
   <b-container class="generalInfoContainer section">
-    <b-row class="generalInfoContainer section">
-      <b-col class="col-4 unitPicture">
+    <b-row>
+      <b-col class="col-xl-3 unitPicture text-center">
         <FadeImage :src="unitPicUrl" />
       </b-col>
-      <b-col class="col-5 align-self-center">
+      <b-col class="col-xl-6 align-self-center">
         <b-row>
-          <b-col class="col-2 unitElement">
+          <b-col class="col-xl-4 unitElement text-right">
             <b-img :src="elementPicUrl"></b-img>
           </b-col>
-          <b-col class="col-9 offset-1 unitName">
+          <b-col class="col-xl-8 unitName text-left">
             {{ unitName }}
           </b-col>
         </b-row>
         <b-row class="unitStar">
-          <b-col>
+          <b-col class="text-center">
             <b-img
               :src="starsPicUrl"
               v-for="i of unitGrade"
@@ -23,7 +23,7 @@
           </b-col>
         </b-row>
       </b-col>
-      <b-col class="col-3 align-self-center">
+      <b-col class="col-xl-3 align-self-center">
         <b-row>
           <b-col class="unitTier" :class="`tier-${unitTier[0]}`">
             {{ unitTier }}

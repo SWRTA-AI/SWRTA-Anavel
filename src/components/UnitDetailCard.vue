@@ -1,5 +1,8 @@
 <template>
-  <b-container class="UnitDetailCardContainer" v-if="detailedInfo">
+  <b-container
+    class="UnitDetailCardContainer overflow-auto"
+    v-if="detailedInfo"
+  >
     <GeneralSection :unitInfo="detailedInfo" />
     <RelationFriendSection :unitInfo="detailedInfo" />
     <RelationCounterSection :unitInfo="detailedInfo" />
@@ -64,5 +67,13 @@ export default {
 .UnitDetailCardContainer {
   background-color: #2a2a2a;
   padding: 0.25rem 1rem 0.25rem 1rem;
+  max-height: 85vh;
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 991px) {
+  .UnitDetailCardContainer {
+    display: none !important;
+  }
 }
 </style>

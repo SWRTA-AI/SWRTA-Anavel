@@ -43,6 +43,6 @@ export default {
 }
 
 .unitPictureContainer {
-  padding: 0px;
+  padding: 0.1vw;
 }
 </style>
