@@ -10,6 +10,7 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
+          <b-nav-item to="/pickban">Pick-Ban</b-nav-item>
           <b-nav-item to="/tierlist">Tierlist</b-nav-item>
         </b-navbar-nav>
 

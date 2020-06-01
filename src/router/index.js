@@ -3,12 +3,13 @@ import VueRouter from 'vue-router';
 
 import PickBan from '../views/PickBan.vue';
 import Tierlist from '../views/Tierlist.vue';
+import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
+    path: '/pickban',
     name: 'PickBan',
     component: PickBan,
   },
@@ -16,6 +17,11 @@ const routes = [
     path: '/tierlist',
     name: 'Tierlist',
     component: Tierlist,
+  },
+  {
+    path: '/',
+    name: 'Home',
+    component: Home,
   },
 ];
 
