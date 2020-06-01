@@ -2,7 +2,7 @@
   <b-container class="unitPickCardPlaceholderContainer">
     <b-row class="align-items-center mb-3">
       <b-col
-        class="col-4 px-0 py-0"
+        class="col-lg-4 col-6 px-0 py-0"
         :class="[layoutType == 1 ? 'order-1' : '']"
       >
         <b-img
@@ -14,7 +14,7 @@
         />
       </b-col>
       <b-col
-        class="unitName col-8 px-3"
+        class="unitName col-lg-8 col-6"
         :class="[layoutType == 1 ? 'text-right' : 'text-left']"
         :hidden="unit.isPlaceholder"
         v-if="unit"
@@ -131,5 +131,11 @@ img:hover {
 
 .glowing-2 {
   animation: glowing-2 2000ms infinite;
+}
+
+@media screen and (max-width: 991px) {
+  .unitName {
+    opacity: 0;
+  }
 }
 </style>

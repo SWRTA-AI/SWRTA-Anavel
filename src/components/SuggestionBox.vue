@@ -3,8 +3,8 @@
     <transition name="fade" mode="in-out">
       <div v-show="isMounted">
         <b-container>
-          <b-row class="mb-2 bg-primary">
-            <b-col class="py-1 mt-2"><h5>Suggested Picks</h5></b-col>
+          <b-row class="title bg-primary">
+            <b-col>Suggested Picks</b-col>
           </b-row>
           <UnitBoxGrid
             :row="MAX_ROW"
@@ -82,10 +82,22 @@ export default {
   padding: 10px;
 }
 
+.title {
+  font-size: 1vw;
+  margin-bottom: 0.5rem;
+  padding: 0.35rem 0;
+}
+
 .fade-enter-active {
   transition: opacity 2s ease-out;
 }
 .fade-enter {
   opacity: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .title {
+    font-size: 4vw;
+  }
 }
 </style>

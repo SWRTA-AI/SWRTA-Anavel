@@ -4,15 +4,17 @@
       <div v-show="isMounted">
         <b-container fluid>
           <b-row class="mt-4">
-            <b-col class="col-xl-3 col-lg-4 col-md-6 ml-xl-3">
+            <b-col class="col-lg-5 mx-xl-4 col-12">
+              <PickBanFrame />
+            </b-col>
+            <b-col
+              class="col-xl-3 col-lg-4 col-12 ml-xl-3 order-lg-first"
+            >
               <SuggestionBox />
               <div class="my-3"></div>
               <UnitBox />
             </b-col>
-            <b-col class="col-lg-5 mx-xl-4">
-              <PickBanFrame />
-            </b-col>
-            <b-col class="col-lg-3">
+            <b-col class="col-lg-3 order-md-3">
               <UnitDetailCard />
             </b-col>
           </b-row>

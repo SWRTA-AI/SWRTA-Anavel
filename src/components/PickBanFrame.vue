@@ -1,10 +1,10 @@
 <template>
   <b-container class="pickBanContainer">
-    <b-row class="pt-3 header">
-      <b-col class="title col-8 offset-2 text-center mb-3">
+    <b-row class="header">
+      <b-col class="title col-8 offset-2">
         SWRTA Pick - Bans
       </b-col>
-      <b-col class="col-2">
+      <b-col class="resetButtonContainer col-2">
         <b-button
           class="resetButton"
           :class="[isAbleToPick ? '' : 'active']"
@@ -66,6 +66,7 @@ export default {
 <style scoped>
 .pickBanContainer {
   background-color: #2a2a2a;
+  margin-bottom: 5vw;
 }
 .title {
   font-size: 1.8vw;
@@ -76,11 +77,42 @@ export default {
   font-size: 1.3vw;
 }
 
+.resetButtonContainer {
+  max-width: 100%;
+}
+
 .resetButton {
   font-size: 1vw;
 }
 
 .header {
   background-color: #12121283;
+  padding: 1vw 0;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    padding: 1vw 0;
+  }
+  .title {
+    font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header {
+    padding: 3vw 0;
+  }
+  .title {
+    font-size: 5vw;
+  }
+  .subtitle {
+    font-size: 4vw;
+  }
+  .resetButton {
+    font-size: 2.5vw;
+  }
 }
 </style>

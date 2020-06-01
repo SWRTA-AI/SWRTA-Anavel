@@ -46,4 +46,10 @@ export default {
   padding: 15px;
   margin-top: 30px;
 }
+
+@media screen and (max-width: 991px) {
+  .footerContainer {
+    font-size: 3vw;
+  }
+}
 </style>
