@@ -2,7 +2,7 @@
   <div class="tierlist">
     <b-container>
       <b-row>
-        <b-img :src="tierlist" />
+        <FadeImage :src="tierlist" />
       </b-row>
       <b-row>
         <b-col class="credit">
@@ -19,8 +19,13 @@
 </template>
 
 <script>
+import FadeImage from '@/components/Transition/FadeImage.vue';
+
 export default {
   name: 'Tierlist',
+  components: {
+    FadeImage,
+  },
   data() {
     return {
       tierlist: require('@/assets/static/images/tierlist.png'),

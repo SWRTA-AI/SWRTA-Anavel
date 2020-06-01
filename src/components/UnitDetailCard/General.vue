@@ -2,7 +2,7 @@
   <b-container class="generalInfoContainer section">
     <b-row class="generalInfoContainer section">
       <b-col class="col-4 unitPicture">
-        <b-img :src="unitPicUrl"></b-img>
+        <FadeImage :src="unitPicUrl" />
       </b-col>
       <b-col class="col-5 align-self-center">
         <b-row>
@@ -36,8 +36,12 @@
 
 <script>
 import { mapState } from 'vuex';
+import FadeImage from '@/components/Transition/FadeImage.vue';
 
 export default {
+  components: {
+    FadeImage,
+  },
   props: {
     unitInfo: Object,
   },
@@ -102,7 +106,7 @@ export default {
   text-align: left;
 }
 
-.unitPicture img {
+.unitPicture >>> img {
   max-width: 100%;
   border-radius: 14px;
 }

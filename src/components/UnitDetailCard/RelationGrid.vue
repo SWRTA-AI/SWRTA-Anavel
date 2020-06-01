@@ -6,10 +6,9 @@
         :key="i"
         class="unitPictureContainer"
       >
-        <b-img
-          :src="unit.image_filename"
-          @click="setActiveUnit(unit)"
-        ></b-img>
+        <div class="unitImage" @click="setActiveUnit(unit)">
+          <FadeImage :src="unit.image_filename" />
+        </div>
       </b-col>
     </b-row>
   </b-container>
@@ -17,7 +16,12 @@
 
 <script>
 import { mapActions } from 'vuex';
+import FadeImage from '@/components/Transition/FadeImage.vue';
+
 export default {
+  components: {
+    FadeImage,
+  },
   props: {
     relatedUnits: Array,
   },
@@ -28,12 +32,12 @@ export default {
 </script>
 
 <style scoped>
-img {
+.unitImage >>> img {
   max-width: 100%;
   border-radius: 15%;
 }
 
-img:hover {
+.unitImage:hover {
   filter: brightness(40%);
   cursor: pointer;
 }

@@ -8,23 +8,22 @@
         Buff / Debuff
       </b-col>
     </b-row>
-    <b-row class="section-info">
-      <b-col>
-        <b-img
-          class="mx-1"
-          :src="url"
-          v-for="(url, i) of buffDebuff"
-          :key="i"
-        ></b-img>
-      </b-col>
+    <b-row class="section-info" align-h="center">
+      <div v-for="(url, i) of buffDebuff" :key="i" class="buff-image">
+        <FadeImage :src="url" />
+      </div>
     </b-row>
   </b-container>
 </template>
 
 <script>
 import { mapState } from 'vuex';
+import FadeImage from '@/components/Transition/FadeImage.vue';
 
 export default {
+  components: {
+    FadeImage,
+  },
   props: {
     unitInfo: Object,
   },
@@ -66,8 +65,12 @@ export default {
   margin: 0px;
 }
 
-.buffDebuffContainer img {
-  max-width: 10%;
+.buff-image {
+  margin: 0 0.2em;
+}
+
+.buff-image >>> img {
+  max-width: 2.5em;
   border-radius: 5px;
 }
 </style>

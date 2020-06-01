@@ -8,8 +8,11 @@
 
     <b-row class="section-info">
       <b-col v-for="(url, i) of skillsPicUrls" :key="i">
-        <div :class="shownSkill == i ? 'active' : 'inactive'">
-          <b-img :src="url" @click="showSkillInfo(i)"></b-img>
+        <div
+          :class="shownSkill == i ? 'active' : 'inactive'"
+          @click="showSkillInfo(i)"
+        >
+          <FadeImage :src="url" />
         </div>
       </b-col>
     </b-row>
@@ -24,12 +27,14 @@
 </template>
 
 <script>
-import SkillDetail from '@/components/UnitDetailCard/SkillDetails.vue';
 import { mapState, mapGetters } from 'vuex';
+import SkillDetail from '@/components/UnitDetailCard/SkillDetails.vue';
+import FadeImage from '@/components/Transition/FadeImage.vue';
 
 export default {
   components: {
     SkillDetail,
+    FadeImage,
   },
   props: {
     unitInfo: Object,
@@ -84,17 +89,17 @@ export default {
   padding: 15px 0px 5px 0px;
 }
 
-.skillsContainer img {
+.skillsContainer >>> img {
   max-width: 75%;
   border-radius: 14px;
   cursor: pointer;
 }
 
-.skillsContainer .inactive img {
+.skillsContainer .inactive >>> img {
   filter: brightness(40%);
 }
 
-.skillsContainer .inactive img:hover {
+.skillsContainer .inactive >>> img:hover {
   filter: brightness(80%);
 }
 </style>
