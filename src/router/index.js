@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import Home from '../views/Home.vue';
+import PickBan from '../views/PickBan.vue';
 import Tierlist from '../views/Tierlist.vue';
 
 Vue.use(VueRouter);
@@ -9,8 +9,8 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'PickBan',
+    component: PickBan,
   },
   {
     path: '/tierlist',
