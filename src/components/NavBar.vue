@@ -15,7 +15,9 @@
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/feedback">Feedback</b-nav-item>
+          <b-button v-b-modal.feedbackModal variant="primary">
+            Feedback
+          </b-button>
 
           <!-- <b-nav-item-dropdown text="Lang" right>
             <b-dropdown-item href="#">EN</b-dropdown-item>
@@ -35,11 +37,17 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
+    <FeedbackModal />
   </div>
 </template>
 
 <script>
+import FeedbackModal from '@/components/FeedbackForm/Modal.vue';
+
 export default {
+  components: {
+    FeedbackModal,
+  },
   data() {
     return {
       logo: require('@/assets/static/logo.png'),
@@ -64,6 +72,15 @@ export default {
 .logo {
   width: 3vw;
   margin-right: 1vw;
+}
+
+.feedbackTrigger {
+  background-color: transparent;
+  border: 0;
+}
+
+.feedbackTrigger:hover {
+  background-color: #ffffff;
 }
 
 @media screen and (max-width: 1199px) {
