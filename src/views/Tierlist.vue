@@ -28,7 +28,8 @@ export default {
   },
   data() {
     return {
-      tierlist: require('@/assets/static/images/tierlist.png'),
+      tierlist:
+        'https://storage.googleapis.com/swrta/static/tierlist-min.jpg',
       credit: {
         author: 'Seiishizo',
         url: 'https://www.youtube.com/watch?v=jOe_H9_RGA4',

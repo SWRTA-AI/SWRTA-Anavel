@@ -14,7 +14,8 @@ export default {
   },
   data() {
     return {
-      imageSrc: require('@/assets/static/images/feedback_card.jpg'),
+      imageSrc:
+        'https://storage.googleapis.com/swrta/static/background01.jpg',
     };
   },
 };

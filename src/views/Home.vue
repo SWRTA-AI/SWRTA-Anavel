@@ -53,7 +53,7 @@ export default {
 <style scoped>
 .homeContainer {
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
-    url('https://bc-gb.com/wp-content/uploads/2019/10/com2us_swc19.png');
+    url('https://storage.googleapis.com/swrta/static/background_02-min.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
