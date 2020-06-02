@@ -12,7 +12,7 @@
         Changelog
       </b-col>
     </b-row> -->
-
+    <DataCount />
     <Credits />
     <Updates />
     <Disclaimer />
@@ -30,6 +30,7 @@
 import Introduction from '@/components/Home/Introduction.vue';
 import Credits from '@/components/Home/Credits.vue';
 import Updates from '@/components/Home/Updates.vue';
+import DataCount from '@/components/Home/DataCount.vue';
 import Disclaimer from '@/components/Home/Disclaimer.vue';
 import Contribute from '@/components/Home/Contribute.vue';
 
@@ -39,6 +40,7 @@ export default {
     Disclaimer,
     Credits,
     Updates,
+    DataCount,
     Contribute,
   },
   data() {
