@@ -2,10 +2,10 @@
   <b-container class="px-0">
     <b-form @submit="onSubmit">
       <b-container>
-        <b-form-group label="Name / email" label-for="input-email">
+        <b-form-group label="Name / email" label-for="input-name">
           <b-form-input
-            id="input-email"
-            v-model="form.email"
+            id="input-name"
+            v-model="form.name"
             placeholder="Hi, I'm..."
             required
           ></b-form-input>
@@ -39,7 +39,7 @@
         <b-form-group label="Details" label-for="input-detail">
           <b-form-textarea
             id="input-detail"
-            v-model="form.name"
+            v-model="form.detail"
             placeholder="so..."
             required
           ></b-form-textarea>
@@ -60,11 +60,13 @@
 </template>
 
 <script>
+import firebase from '@/config/firebase.js';
+
 export default {
   data() {
     return {
       form: {
-        email: '',
+        name: '',
         type: null,
         detail: '',
         device: '',
@@ -83,6 +85,8 @@ export default {
       this.isSubmitted = true;
       evt.preventDefault();
       console.log(JSON.stringify(this.form));
+
+      firebase.db.ref('feedbackForms/').push(this.form);
     },
   },
 };
