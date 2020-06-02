@@ -14,18 +14,21 @@
         </b-row>
 
         <b-row
-          class="updates"
+          class="updateRow"
           v-for="(update, i) of updates"
           :key="i"
         >
-          <b-col class="col-lg-2 col-md-3 col-sm-4 col-4">
+          <b-col
+            class="col-lg-2 col-md-3 col-4 text-md-center text-left"
+          >
             {{ update.version }}
           </b-col>
-          <b-col class="col-lg-4 col-md-3 col-sm-8 col-8">
+          <b-col
+            class="col-lg-4 col-md-3 col-8 text-md-center text-right"
+          >
             {{ update.date }}
           </b-col>
-          <b-col
-            class="col-lg-6 col-md-6 col-sm-8 offset-md-0 offset-4"
+          <b-col class="col-md-6 col-sm-8 offset-md-0 text-justify"
             >{{ update.description }}
           </b-col>
         </b-row>
@@ -49,7 +52,8 @@ export default {
         },
         {
           version: 'v0.9.0',
-          description: 'Beta version release',
+          description:
+            'Beta version release for mobile and web browsers',
           date: '01 June 2020',
         },
       ],
@@ -72,8 +76,17 @@ export default {
   margin-bottom: 1em;
 }
 
-.updates {
+.updateRow {
   margin: 1em 0;
   align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+  .sectionContainer {
+    padding: 4vw 5vw;
+  }
+  .updateRow {
+    margin: 2em 0;
+  }
 }
 </style>

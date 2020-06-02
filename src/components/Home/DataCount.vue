@@ -78,4 +78,14 @@ export default {
   font-size: 5em;
   align-items: center;
 }
+
+@media screen and (max-width: 991px) {
+  .counter {
+    font-size: 4em;
+    align-items: center;
+  }
+  .sectionContainer {
+    padding: 4vw 5vw;
+  }
+}
 </style>

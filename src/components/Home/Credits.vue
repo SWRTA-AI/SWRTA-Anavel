@@ -80,4 +80,10 @@ export default {
 .btn {
   max-width: 100%;
 }
+
+@media screen and (max-width: 991px) {
+  .sectionContainer {
+    padding: 4vw 5vw;
+  }
+}
 </style>

@@ -57,4 +57,10 @@ export default {
   font-size: 0.8em;
   margin-bottom: 1em;
 }
+
+@media screen and (max-width: 991px) {
+  .sectionContainer {
+    padding: 4vw 5vw;
+  }
+}
 </style>
