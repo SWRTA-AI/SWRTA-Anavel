@@ -13,7 +13,7 @@ export default {
   FIRST_PICK_IDX: [0, 3, 4, 7, 8],
   SECOND_PICK_IDX: [1, 2, 5, 6, 9],
 
-  DEVELOPMENT_MODE: true,
+  DEVELOPMENT_MODE: false,
   DUMMY_RESPONSE: DUMMY_RESPONSE,
   URLS: URLS,
 

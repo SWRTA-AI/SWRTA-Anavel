@@ -7,6 +7,7 @@
         data-aos="fade-up"
         data-aos-offset="300"
         data-aos-duration="800"
+        data-aos-once="true"
       >
         <b-row class="title">
           <b-col>{{ title }}</b-col>

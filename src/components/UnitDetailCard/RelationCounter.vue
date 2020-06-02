@@ -3,7 +3,7 @@
     class="relationCounterContainer section"
     v-if="relatedUnits && relatedUnits.length > 0"
   >
-    <SectionTitle title="Top counter-pick" />
+    <SectionTitle :title="title" />
     <RelatedUnitsSection :relatedUnits="relatedUnits" />
   </b-container>
 </template>
@@ -20,6 +20,11 @@ export default {
   },
   props: {
     unitInfo: Object,
+  },
+  data() {
+    return {
+      title: 'Counter - ing / by',
+    };
   },
   computed: {
     ...mapState(['URLS', 'DEVELOPMENT_MODE', 'DUMMY_RESPONSE']),

@@ -1,6 +1,10 @@
 <template>
   <b-container fluid class="introductionContainer">
-    <b-row data-aos="fade-up" data-aos-duration="2000">
+    <b-row
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      data-aos-once="true"
+    >
       <b-col>
         <b-jumbotron
           bg-variant="transparent"
@@ -11,21 +15,35 @@
         </b-jumbotron>
       </b-col>
     </b-row>
-    <b-row class="mb-5" data-aos="fade-up" data-aos-duration="2000">
+    <b-row
+      class="mb-5"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      data-aos-once="true"
+    >
       <b-col class="col-xl-4 col-lg-3 col-sm-2"> </b-col>
       <b-col class="col-xl-4 col-lg-6 col-sm-8 col-12 intro">
         <div v-html="intro"></div>
       </b-col>
       <b-col class="col-xl-4 col-lg-3 col-sm-2"> </b-col>
     </b-row>
-    <b-row class="mb-5" data-aos="fade-up" data-aos-duration="2000">
+    <b-row
+      class="mb-5"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      data-aos-once="true"
+    >
       <b-col class="col-xl-4 col-lg-3 col-sm-2"> </b-col>
       <b-col class="col-xl-4 col-lg-6 col-sm-8 col-12">
         <div v-html="description"></div>
       </b-col>
       <b-col class="col-xl-4 col-lg-3 col-sm-2"> </b-col>
     </b-row>
-    <b-row data-aos="zoom-in" data-aos-duration="2000">
+    <b-row
+      data-aos="zoom-in"
+      data-aos-duration="2000"
+      data-aos-once="true"
+    >
       <b-col>
         <b-button variant="primary" to="/pickban">
           Getting Started

@@ -6,6 +6,7 @@
         class="ContributeContainer col-xl-4 col-lg-6 col-sm-8 col-12"
         data-aos="fade-up"
         data-aos-duration="800"
+        data-aos-once="true"
       >
         <b-row class="title">
           <b-col>{{ title }}</b-col>
